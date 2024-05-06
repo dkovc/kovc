@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mysterious Realm</title>
+    <title>Enigma Arcano</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap'); /* Importing the font */
 
@@ -40,24 +40,30 @@
             color: white;
             font-size: 5vw;
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-            animation: pulse 2s infinite, rotate 60s infinite linear;
+            animation: pulse 2s infinite, tremble 0.5s infinite;
         }
         @keyframes pulse {
             0%, 100% {
-                transform: scale(1) rotate(0deg);
+                transform: scale(1);
                 opacity: 0.5;
             }
             50% {
-                transform: scale(1.1) rotate(0deg);
+                transform: scale(1.1);
                 opacity: 1;
             }
         }
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
+        @keyframes tremble {
+            0%, 100% {
+                transform: translate(0);
             }
-            to {
-                transform: rotate(360deg);
+            25% {
+                transform: translate(-2px, -2px);
+            }
+            50% {
+                transform: translate(2px, 2px);
+            }
+            75% {
+                transform: translate(-2px, 2px);
             }
         }
         @media (max-width: 600px) {
