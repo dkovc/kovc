@@ -22,30 +22,35 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            position: relative; /* For absolute positioning of children */
         }
         .at-symbol {
             font-family: 'Glacial Indifference', sans-serif;
-            font-weight: 100; /* Ensuring the thin appearance */
+            font-weight: 100;
             font-size: calc(15vw + 20px); /* Large size for visual prominence */
-            color: white;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-            animation: pulse 2s infinite, tremble 0.5s infinite;
+            color: rgba(255, 255, 255, 0.2); /* Less visible */
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+            position: absolute;
+            z-index: 1; /* Ensures it's behind the text */
+            animation: pulse 2s infinite;
         }
         .text {
-            position: absolute;
             font-family: 'Glacial Indifference', sans-serif;
             color: white;
-            font-size: calc(2vw + 10px); /* Responsive font size with additional padding */
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+            font-size: calc(5vw + 10px); /* Responsive font size */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Brighter shadow for emphasis */
+            position: relative;
+            z-index: 2; /* Ensures text is above the @ symbol */
+            animation: tremble 0.5s infinite;
         }
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
-                opacity: 0.5;
+                opacity: 0.2; /* Subtler effect */
             }
             50% {
-                transform: scale(1.1);
-                opacity: 1;
+                transform: scale(1.05);
+                opacity: 0.3; /* Slightly more visible at the peak */
             }
         }
         @keyframes tremble {
@@ -53,21 +58,21 @@
                 transform: translate(0);
             }
             25% {
-                transform: translate(-2px, -2px);
+                transform: translate(-1px, -1px);
             }
             50% {
-                transform: translate(2px, 2px);
+                transform: translate(1px, 1px);
             }
             75% {
-                transform: translate(-2px, 2px);
+                transform: translate(-1px, 1px);
             }
         }
         @media (max-width: 600px) {
             .at-symbol {
-                font-size: 40vw; /* Adjusted for readability on smaller screens */
+                font-size: 40vw; /* Adjusted for smaller screens */
             }
             .text {
-                font-size: 8vw; /* Larger font size for readability on mobile */
+                font-size: 12vw; /* Larger font size for better readability on mobile */
             }
         }
     </style>
