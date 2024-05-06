@@ -5,57 +5,60 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap'); /* Importing the font */
 
-        body {
-            background-color: black;
-            background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 70%),
-                              radial-gradient(circle at 80% 50%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 70%);
-            background-size: cover;
-            animation: bgshift 30s infinite alternate;
+        body, html {
+            height: 100%;
             margin: 0;
-            height: 100vh;
+            padding: 0;
+            background-color: black;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
         .circle {
             width: 20vw;
             height: 20vw;
-            background-color: rgba(255, 255, 255, 0.05);
+            max-width: 120px;
+            max-height: 120px;
+            min-width: 80px;
+            min-height: 80px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 70%);
             border-radius: 50%;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Glacial Indifference', sans-serif;
             color: white;
-            font-size: 4vw;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-            animation: pulse 2s infinite, textChange 10s infinite step-end;
+            font-size: 5vw;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+            animation: pulse 2s infinite, rotate 60s infinite linear;
         }
         @keyframes pulse {
             0%, 100% {
-                transform: scale(1);
+                transform: scale(1) rotate(0deg);
                 opacity: 0.5;
             }
             50% {
-                transform: scale(1.1);
+                transform: scale(1.1) rotate(0deg);
                 opacity: 1;
             }
         }
-        @keyframes bgshift {
+        @keyframes rotate {
             from {
-                background-position: 0% 0%, 100% 50%;
+                transform: rotate(0deg);
             }
             to {
-                background-position: 100% 100%, 0% 50%;
+                transform: rotate(360deg);
             }
-        }
-        @keyframes textChange {
-            0%, 20% { content: "ko.vc"; }
-            25%, 45% { content: "seek"; }
-            50%, 70% { content: "find"; }
-            75%, 95% { content: "decode"; }
         }
         @media (max-width: 600px) {
             .circle {
@@ -67,6 +70,8 @@
     </style>
 </head>
 <body>
-    <div class="circle">ko.vc</div>
+    <div class="container">
+        <div class="circle">ko.vc</div>
+    </div>
 </body>
 </html>
