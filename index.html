@@ -3,6 +3,8 @@
 <head>
     <title>Home</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap'); /* Importing the font */
+
         body {
             background-color: black;
             margin: 0;
@@ -13,11 +15,17 @@
             overflow: hidden;
         }
         .circle {
-            width: 15vw; /* Responsive width */
-            height: 15vw; /* Responsive height, maintaining aspect ratio */
+            width: 20vw; /* Enlarged width */
+            height: 20vw; /* Enlarged height to maintain aspect ratio */
             background-color: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Glacial Indifference', sans-serif; /* Applying the font */
+            color: white;
+            font-size: 4vw; /* Responsive font size */
             animation: pulse 2s infinite;
         }
         @keyframes pulse {
@@ -26,20 +34,21 @@
                 opacity: 0.5;
             }
             50% {
-                transform: scale(1.05);
+                transform: scale(1.1); /* Slightly larger scale for better visibility */
                 opacity: 1;
             }
         }
         @media (max-width: 600px) {
             .circle {
-                width: 30vw; /* Larger on smaller screens */
-                height: 30vw;
+                width: 40vw; /* Adjusted for smaller screens */
+                height: 40vw;
+                font-size: 8vw; /* Larger font size for smaller screens */
             }
         }
     </style>
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAwklEQVR4AYXSr05DURQA4GNAQ7iT1BUlgqs7qJ0g+tBVVVVVTVV9k5DqR3Cj4EPkA77uc572OzBcGCApHo/PXlVqaa2hJDFXpCejXvAJ5AOIbSHTOcZUMogpEYsRlJvKHHYnkB5x9AAzKycZS4yigv6bQcWcxwZxPyn2BzJj6B2IFeflUj0Q6w4jXmtqA9ehoDvi4Qx/k7wdZ68bNNrK1yFs47KMUwvInmEjbVjbL+w1Go9q7BaK0dJY5EvFcpaj+Cf1lN5k9dMwHr/i1aDvwEjFVwRqzQ4wf1LIZ7tK+dF2G/AXJpxfyYvUYFQAAAABJRU5ErkJggg==">
 </head>
 <body>
-    <div class="circle"></div>
+    <div class="circle">ko.vc</div>
 </body>
 </html>
