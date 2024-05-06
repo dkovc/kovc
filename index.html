@@ -5,31 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enigma Arcano</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <style>
         body {
-            background: #000 radial-gradient(circle, transparent, #111);
+            background: #000 radial-gradient(circle, #222, #000);
             color: #fff;
-            font-family: 'Glacial Indifference', sans-serif;
-            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 100;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            transition: background 1s ease;
         }
         h1 {
             margin: 0;
-            font-size: 4em;
+            font-size: 6em;
             animation: pulse 2s infinite ease-in-out, tremble 0.2s infinite;
+            letter-spacing: 5px;
         }
         @keyframes pulse {
             0%, 100% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #888, 0 0 20px #444;
+                text-shadow: 0 0 5px #fff, 0 0 15px #888, 0 0 25px #666;
             }
             50% {
-                text-shadow: 0 0 10px #fff, 0 0 20px #888, 0 0 30px #444, 0 0 40px #222;
+                text-shadow: 0 0 10px #fff, 0 0 20px #888, 0 0 30px #444;
             }
         }
         @keyframes tremble {
@@ -37,24 +39,22 @@
                 transform: translate(0, 0);
             }
             25% {
-                transform: translate(-1px, 0);
+                transform: translate(-2px, 1px);
             }
             50% {
-                transform: translate(1px, 0);
+                transform: translate(2px, -1px);
             }
             75% {
-                transform: translate(0, 1px);
+                transform: translate(0, 2px);
             }
         }
-        /* Background animation */
         @keyframes backgroundFlow {
-            0% {background-position: 0% 50%;}
+            0%, 100% {background-position: 0% 50%;}
             50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
         }
         body {
             background-size: 200% 200%;
-            animation: backgroundFlow 30s ease infinite;
+            animation: backgroundFlow 60s ease infinite;
         }
     </style>
 </head>
