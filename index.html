@@ -1,78 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enigma Arcano</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@100&display=swap'); /* Importing the thinner font weight */
+        @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@100&display=swap');
 
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: black;
+            background-color: #1a1a1a; /* Darker shade for more elegance */
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
         .container {
-            width: 100vw;
-            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            position: relative; /* For absolute positioning of children */
+            height: 100vh;
+            text-align: center;
         }
         .at-symbol {
             font-family: 'Glacial Indifference', sans-serif;
             font-weight: 100;
-            font-size: calc(15vw + 20px); /* Large size for visual prominence */
-            color: rgba(255, 255, 255, 0.2); /* Less visible */
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+            font-size: 8vw; /* Scaled down for more elegance and less dominance */
+            color: rgba(255, 255, 255, 0.1); /* Very subtle */
             position: absolute;
-            z-index: 1; /* Ensures it's behind the text */
-            animation: pulse 2s infinite;
+            z-index: 1;
+            animation: pulse 10s infinite alternate ease-in-out;
         }
         .text {
             font-family: 'Glacial Indifference', sans-serif;
             color: white;
-            font-size: calc(5vw + 10px); /* Responsive font size */
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Brighter shadow for emphasis */
+            font-size: 4vw; /* Properly sized for visibility across devices */
             position: relative;
-            z-index: 2; /* Ensures text is above the @ symbol */
-            animation: tremble 0.5s infinite;
+            z-index: 2;
+            padding: 20px; /* Adds spacing, enhancing readability */
+            border: 2px solid white; /* Adds a touch of elegance */
+            border-radius: 10px; /* Soft rounded corners */
+            animation: softGlow 5s infinite alternate ease-in-out;
         }
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.2; /* Subtler effect */
+            0% {
+                transform: scale(0.8);
+                opacity: 0.1;
             }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.3; /* Slightly more visible at the peak */
-            }
-        }
-        @keyframes tremble {
-            0%, 100% {
-                transform: translate(0);
-            }
-            25% {
-                transform: translate(-1px, -1px);
-            }
-            50% {
-                transform: translate(1px, 1px);
-            }
-            75% {
-                transform: translate(-1px, 1px);
+            100% {
+                transform: scale(1.2);
+                opacity: 0.2;
             }
         }
-        @media (max-width: 600px) {
+        @keyframes softGlow {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            }
+        }
+        @media (max-width: 768px) {
             .at-symbol {
-                font-size: 40vw; /* Adjusted for smaller screens */
+                font-size: 12vw;
             }
             .text {
-                font-size: 12vw; /* Larger font size for better readability on mobile */
+                font-size: 6vw;
+                padding: 10px; /* Adjust padding for smaller devices */
             }
         }
     </style>
