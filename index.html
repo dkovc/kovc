@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Mysterious Realm</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap'); /* Importing the font */
 
         body {
             background-color: black;
+            background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 70%),
+                              radial-gradient(circle at 80% 50%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 70%);
+            background-size: cover;
+            animation: bgshift 30s infinite alternate;
             margin: 0;
             height: 100vh;
             display: flex;
@@ -15,18 +19,19 @@
             overflow: hidden;
         }
         .circle {
-            width: 20vw; /* Enlarged width */
-            height: 20vw; /* Enlarged height to maintain aspect ratio */
+            width: 20vw;
+            height: 20vw;
             background-color: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Glacial Indifference', sans-serif; /* Applying the font */
+            font-family: 'Glacial Indifference', sans-serif;
             color: white;
-            font-size: 4vw; /* Responsive font size */
-            animation: pulse 2s infinite;
+            font-size: 4vw;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            animation: pulse 2s infinite, textChange 10s infinite step-end;
         }
         @keyframes pulse {
             0%, 100% {
@@ -34,19 +39,32 @@
                 opacity: 0.5;
             }
             50% {
-                transform: scale(1.1); /* Slightly larger scale for better visibility */
+                transform: scale(1.1);
                 opacity: 1;
             }
         }
+        @keyframes bgshift {
+            from {
+                background-position: 0% 0%, 100% 50%;
+            }
+            to {
+                background-position: 100% 100%, 0% 50%;
+            }
+        }
+        @keyframes textChange {
+            0%, 20% { content: "ko.vc"; }
+            25%, 45% { content: "seek"; }
+            50%, 70% { content: "find"; }
+            75%, 95% { content: "decode"; }
+        }
         @media (max-width: 600px) {
             .circle {
-                width: 40vw; /* Adjusted for smaller screens */
+                width: 40vw;
                 height: 40vw;
-                font-size: 8vw; /* Larger font size for smaller screens */
+                font-size: 8vw;
             }
         }
     </style>
-    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAwklEQVR4AYXSr05DURQA4GNAQ7iT1BUlgqs7qJ0g+tBVVVVVTVV9k5DqR3Cj4EPkA77uc572OzBcGCApHo/PXlVqaa2hJDFXpCejXvAJ5AOIbSHTOcZUMogpEYsRlJvKHHYnkB5x9AAzKycZS4yigv6bQcWcxwZxPyn2BzJj6B2IFeflUj0Q6w4jXmtqA9ehoDvi4Qx/k7wdZ68bNNrK1yFs47KMUwvInmEjbVjbL+w1Go9q7BaK0dJY5EvFcpaj+Cf1lN5k9dMwHr/i1aDvwEjFVwRqzQ4wf1LIZ7tK+dF2G/AXJpxfyYvUYFQAAAABJRU5ErkJggg==">
 </head>
 <body>
     <div class="circle">ko.vc</div>
