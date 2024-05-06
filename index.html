@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Home</title>
     <style>
-        body { background-color: black; margin: 0; height: 100vh; }
+        body {
+            background-color: black;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .circle {
+            width: 15vw; /* Responsive width */
+            height: 15vw; /* Responsive height, maintaining aspect ratio */
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+        @media (max-width: 600px) {
+            .circle {
+                width: 30vw; /* Larger on smaller screens */
+                height: 30vw;
+            }
+        }
     </style>
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAwklEQVR4AYXSr05DURQA4GNAQ7iT1BUlgqs7qJ0g+tBVVVVVTVV9k5DqR3Cj4EPkA77uc572OzBcGCApHo/PXlVqaa2hJDFXpCejXvAJ5AOIbSHTOcZUMogpEYsRlJvKHHYnkB5x9AAzKycZS4yigv6bQcWcxwZxPyn2BzJj6B2IFeflUj0Q6w4jXmtqA9ehoDvi4Qx/k7wdZ68bNNrK1yFs47KMUwvInmEjbVjbL+w1Go9q7BaK0dJY5EvFcpaj+Cf1lN5k9dMwHr/i1aDvwEjFVwRqzQ4wf1LIZ7tK+dF2G/AXJpxfyYvUYFQAAAABJRU5ErkJggg==">
 </head>
 <body>
+    <div class="circle"></div>
 </body>
 </html>
