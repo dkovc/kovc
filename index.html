@@ -23,34 +23,20 @@
             justify-content: center;
             flex-direction: column;
         }
-        .circle {
-            position: relative;
-            width: calc(10vw + 40px); /* Adding extra space for proportional padding */
-            height: calc(10vw + 40px); /* Keeping the circle size relative to viewport plus padding */
-            max-width: 160px;
-            max-height: 160px;
-            min-width: 100px;
-            min-height: 100px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 70%);
-            border-radius: 50%;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .at-symbol {
+            font-family: 'Glacial Indifference', sans-serif;
+            font-weight: 100; /* Ensuring the thin appearance */
+            font-size: calc(15vw + 20px); /* Large size for visual prominence */
+            color: white;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+            animation: pulse 2s infinite, tremble 0.5s infinite;
+        }
+        .text {
+            position: absolute;
             font-family: 'Glacial Indifference', sans-serif;
             color: white;
             font-size: calc(2vw + 10px); /* Responsive font size with additional padding */
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-            animation: pulse 2s infinite, tremble 0.5s infinite;
-            overflow: hidden; /* Ensures no overflow of child elements */
-        }
-        .ripple {
-            position: absolute;
-            width: 120%;
-            height: 120%;
-            background: radial-gradient(circle, transparent, transparent 40%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0) 90%);
-            border-radius: 50%;
-            animation: rippleEffect 6s infinite ease-out;
         }
         @keyframes pulse {
             0%, 100% {
@@ -76,20 +62,11 @@
                 transform: translate(-2px, 2px);
             }
         }
-        @keyframes rippleEffect {
-            0% {
-                transform: scale(0.8);
-                opacity: 0.4;
-            }
-            100% {
-                transform: scale(1.5);
-                opacity: 0;
-            }
-        }
         @media (max-width: 600px) {
-            .circle {
-                width: 40vw; /* Larger proportional size for better visibility on smaller screens */
-                height: 40vw;
+            .at-symbol {
+                font-size: 40vw; /* Adjusted for readability on smaller screens */
+            }
+            .text {
                 font-size: 8vw; /* Larger font size for readability on mobile */
             }
         }
@@ -97,10 +74,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="circle">
-            ko.vc
-            <div class="ripple"></div>
-        </div>
+        <div class="at-symbol">@</div>
+        <div class="text">ko.vc</div>
     </div>
 </body>
 </html>
