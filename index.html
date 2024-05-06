@@ -4,80 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enigma Arcano</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@100&display=swap');
-
-        body, html {
-            height: 100%;
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Glacial Indifference', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #1a1a1a; /* Darker shade for more elegance */
             display: flex;
-            align-items: center;
             justify-content: center;
-            overflow: hidden;
-        }
-        .container {
-            display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column;
             height: 100vh;
-            text-align: center;
         }
-        .at-symbol {
-            font-family: 'Glacial Indifference', sans-serif;
-            font-weight: 100;
-            font-size: 8vw; /* Scaled down for more elegance and less dominance */
-            color: rgba(255, 255, 255, 0.1); /* Very subtle */
-            position: absolute;
-            z-index: 1;
-            animation: pulse 10s infinite alternate ease-in-out;
+        h1 {
+            margin: 0;
+            font-size: 4em;
+            font-weight: normal;
+            border: 1px solid #333;
+            padding: 20px;
+            box-shadow: 0 0 15px #222;
         }
-        .text {
-            font-family: 'Glacial Indifference', sans-serif;
-            color: white;
-            font-size: 4vw; /* Properly sized for visibility across devices */
-            position: relative;
-            z-index: 2;
-            padding: 20px; /* Adds spacing, enhancing readability */
-            border: 2px solid white; /* Adds a touch of elegance */
-            border-radius: 10px; /* Soft rounded corners */
-            animation: softGlow 5s infinite alternate ease-in-out;
-        }
-        @keyframes pulse {
-            0% {
-                transform: scale(0.8);
-                opacity: 0.1;
-            }
-            100% {
-                transform: scale(1.2);
-                opacity: 0.2;
-            }
-        }
-        @keyframes softGlow {
-            0% {
-                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            }
-            100% {
-                box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-            }
-        }
-        @media (max-width: 768px) {
-            .at-symbol {
-                font-size: 12vw;
-            }
-            .text {
-                font-size: 6vw;
-                padding: 10px; /* Adjust padding for smaller devices */
-            }
-        }
+        /* Add more styling for additional dark elements as needed */
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="at-symbol">@</div>
-        <div class="text">ko.vc</div>
-    </div>
+    <h1>ko.vc</h1>
 </body>
 </html>
