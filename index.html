@@ -53,17 +53,17 @@
     </style>
 </head>
 <body>
-    <svg width="0" height="0">
-      <defs>
-        <filter id="fancy-glow" height="130%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
-          <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
-          <feMerge>
-            <feMergeNode in="offsetBlur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <filter id="fancy-glow">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+                <feOffset in="blur" dx="0" dy="0" result="offsetBlur"/>
+                <feMerge>
+                    <feMergeNode in="offsetBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
     </svg>
     <h1>ko.vc</h1>
     <script>
