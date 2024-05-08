@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <style>
         body {
-            background: #000;
+            background: #000 radial-gradient(circle, #222, #000);
             color: #fff;
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
@@ -19,9 +19,7 @@
             height: 100vh;
             overflow: hidden;
             transition: background 1s ease;
-            background: radial-gradient(circle at 50% 50%, #000 25%, #333 25%, #333 75%, #000 75%);
-            background-size: 60px 60px;
-            animation: backgroundFlow 120s ease infinite;
+            animation: backgroundFlow 60s ease infinite;
         }
         h1 {
             margin: 0;
@@ -29,7 +27,7 @@
             animation: glow 5s infinite alternate, tremble 0.2s infinite;
             letter-spacing: 5px;
             color: #ffffff;
-            text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #0099ff, 0 0 120px #0099ff; /* Strong white to bright blue glow */
+            text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #0099ff, 0 0 120px #0099ff;
         }
         @keyframes glow {
             0% {
@@ -60,8 +58,12 @@
             }
         }
         @keyframes backgroundFlow {
-            0%, 100% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
         }
     </style>
 </head>
