@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <style>
         body {
-            background: #000 radial-gradient(circle, #222, #000);
+            background: #000;
             color: #fff;
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
@@ -19,33 +19,35 @@
             height: 100vh;
             overflow: hidden;
             transition: background 1s ease;
+            background: linear-gradient(135deg, #333 25%, transparent 25%) -50px 0,
+                        linear-gradient(225deg, #333 25%, transparent 25%) -50px 0,
+                        linear-gradient(315deg, #333 25%, transparent 25%),
+                        linear-gradient(45deg, #333 25%, #000 25%);
+            background-size: 100px 100px;
+            background-color: #111;
         }
         h1 {
             margin: 0;
             font-size: 6em;
-            animation: pulse 2s infinite ease-in-out, tremble 0.2s infinite;
+            animation: pulse 2s infinite ease-in-out, glow 5s infinite alternate;
             letter-spacing: 5px;
+            text-shadow: 0 0 20px #00f6ff, 0 0 30px #00f6ff, 0 0 40px #00f6ff, 0 0 70px #00f6ff, 0 0 80px #00f6ff, 0 0 100px #00f6ff, 0 0 150px #00f6ff;
+            color: transparent;
         }
         @keyframes pulse {
             0%, 100% {
-                text-shadow: 0 0 5px #fff, 0 0 15px #888, 0 0 25px #666;
+                text-shadow: 0 0 10px #00f6ff, 0 0 20px #008f99, 0 0 30px #005f5f;
             }
             50% {
-                text-shadow: 0 0 10px #fff, 0 0 20px #888, 0 0 30px #444;
+                text-shadow: 0 0 20px #00f6ff, 0 0 30px #008f99, 0 0 40px #005f5f;
             }
         }
-        @keyframes tremble {
-            0%, 100% {
-                transform: translate(0, 0);
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00f6ff, 0 0 20px #00f6ff, 0 0 30px #00f6ff;
             }
-            25% {
-                transform: translate(-2px, 1px);
-            }
-            50% {
-                transform: translate(2px, -1px);
-            }
-            75% {
-                transform: translate(0, 2px);
+            to {
+                text-shadow: 0 0 20px #007799, 0 0 30px #007799, 0 0 40px #007799, 0 0 50px #007799, 0 0 60px #007799, 0 0 70px #007799;
             }
         }
         @keyframes backgroundFlow {
@@ -54,7 +56,7 @@
         }
         body {
             background-size: 200% 200%;
-            animation: backgroundFlow 60s ease infinite;
+            animation: backgroundFlow 120s ease infinite;
         }
     </style>
 </head>
