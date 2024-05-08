@@ -19,44 +19,31 @@
             height: 100vh;
             overflow: hidden;
             transition: background 1s ease;
-            background: linear-gradient(135deg, #333 25%, transparent 25%) -50px 0,
-                        linear-gradient(225deg, #333 25%, transparent 25%) -50px 0,
-                        linear-gradient(315deg, #333 25%, transparent 25%),
-                        linear-gradient(45deg, #333 25%, #000 25%);
-            background-size: 100px 100px;
-            background-color: #111;
+            background: linear-gradient(45deg, rgba(34,34,34,0.9) 25%, transparent 25%, transparent 75%, rgba(34,34,34,0.9) 75%),
+                        linear-gradient(45deg, rgba(34,34,34,0.9) 25%, transparent 25%, transparent 75%, rgba(34,34,34,0.9) 75%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            animation: backgroundFlow 120s ease infinite;
         }
         h1 {
             margin: 0;
             font-size: 6em;
-            animation: pulse 2s infinite ease-in-out, glow 5s infinite alternate;
+            animation: pulse 2s infinite ease-in-out;
             letter-spacing: 5px;
-            text-shadow: 0 0 20px #00f6ff, 0 0 30px #00f6ff, 0 0 40px #00f6ff, 0 0 70px #00f6ff, 0 0 80px #00f6ff, 0 0 100px #00f6ff, 0 0 150px #00f6ff;
-            color: transparent;
+            color: #00f6ff;
+            text-shadow: 0 0 30px #00f6ff, 0 0 60px #00f6ff, 0 0 90px #00f6ff;
         }
         @keyframes pulse {
             0%, 100% {
-                text-shadow: 0 0 10px #00f6ff, 0 0 20px #008f99, 0 0 30px #005f5f;
+                text-shadow: 0 0 30px #00f6ff, 0 0 60px #00f6ff, 0 0 90px #00f6ff;
             }
             50% {
-                text-shadow: 0 0 20px #00f6ff, 0 0 30px #008f99, 0 0 40px #005f5f;
-            }
-        }
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #00f6ff, 0 0 20px #00f6ff, 0 0 30px #00f6ff;
-            }
-            to {
-                text-shadow: 0 0 20px #007799, 0 0 30px #007799, 0 0 40px #007799, 0 0 50px #007799, 0 0 60px #007799, 0 0 70px #007799;
+                text-shadow: 0 0 45px #00f6ff, 0 0 75px #00f6ff, 0 0 105px #00f6ff;
             }
         }
         @keyframes backgroundFlow {
-            0%, 100% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-        }
-        body {
-            background-size: 200% 200%;
-            animation: backgroundFlow 120s ease infinite;
+            0%, 100% {background-position: 0% 50%, 30px 80px;}
+            50% {background-position: 100% 50%, 130px 80px;}
         }
     </style>
 </head>
@@ -66,7 +53,7 @@
         document.body.addEventListener('mousemove', function(e) {
             const x = e.clientX / window.innerWidth - 0.5;
             const y = e.clientY / window.innerHeight - 0.5;
-            document.body.style.backgroundPosition = `${-x * 50}px ${-y * 50}px`;
+            document.body.style.backgroundPosition = `${-x * 50}px ${-y * 50}px, ${30 - x * 50}px ${30 - y * 50}px`;
         });
     </script>
 </body>
