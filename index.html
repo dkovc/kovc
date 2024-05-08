@@ -26,10 +26,10 @@
         h1 {
             margin: 0;
             font-size: 6em;
-            animation: glow 5s infinite alternate;
+            animation: glow 5s infinite alternate, tremble 0.2s infinite;
             letter-spacing: 5px;
             color: #ffffff;
-            text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #0099ff, 0 0 120px #0099ff;
+            text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #0099ff, 0 0 120px #0099ff; /* Strong white to bright blue glow */
         }
         @keyframes glow {
             0% {
@@ -43,6 +43,20 @@
             100% {
                 color: #ffffff;
                 text-shadow: 0 0 40px #ffffff, 0 0 80px #0099ff, 0 0 120px #0099ff, 0 0 200px #0099ff;
+            }
+        }
+        @keyframes tremble {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-1px, 1px);
+            }
+            50% {
+                transform: translate(1px, -1px);
+            }
+            75% {
+                transform: translate(-1px, 1px);
             }
         }
         @keyframes backgroundFlow {
