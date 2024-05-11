@@ -16,22 +16,21 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(135deg, #0a0f11, #192841, #272930);
-    background-size: 200% 200%;
-    animation: GradientShift 15s infinite linear;
+    background: linear-gradient(270deg, #1a1b1e, #343536, #1a1b1e, #343536);
+    background-size: 800% 800%;
+    animation: GradientWave 30s ease infinite;
 }
 
 h1 {
     font-size: 6em;
     color: #ccd6f6;
-    text-shadow: 0 0 10px rgba(204, 214, 246, 0.7);
+    text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
     animation: textTremble 0.2s infinite;
 }
 
-@keyframes GradientShift {
-    0% { background-position: 0% 50% }
+@keyframes GradientWave {
+    0%, 100% { background-position: 0% 50% }
     50% { background-position: 100% 50% }
-    100% { background-position: 0% 50% }
 }
 
 @keyframes textTremble {
