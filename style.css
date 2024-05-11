@@ -7,13 +7,14 @@
 
 :root {
     --font-family: 'Roboto', sans-serif;
-    --background-primary: #000000;
-    --background-secondary: #112233;
-    --background-accent: #332211;
+    --background-primary: #0a0f11;
+    --background-secondary: #192233;
+    --background-accent: #2a2f41;
+    --text-glow: rgba(255, 255, 255, 0.6);
 }
 
 body {
-    color: #ffffff;
+    color: #fff;
     font-family: var(--font-family);
     font-weight: 100;
     margin: 0;
@@ -23,23 +24,42 @@ body {
     height: 100vh;
     overflow: hidden;
     background: var(--background-primary);
-    background-image: radial-gradient(circle at top left, var(--background-secondary), transparent 70%),
-                      radial-gradient(circle at bottom right, var(--background-accent), transparent 70%);
-    animation: backgroundShift 30s infinite alternate ease-in-out;
+    background-image: radial-gradient(circle at top left, var(--background-secondary), transparent 60%),
+                      radial-gradient(circle at bottom right, var(--background-accent), transparent 60%);
+    animation: backgroundWave 30s infinite alternate ease-in-out, rotateBackground 120s linear infinite;
 }
 
 h1 {
-    margin: 0;
     font-size: 6em;
-    color: #aaa;
-    opacity: 0.8;
+    color: #ccc;
+    opacity: 0.9;
+    animation: textFocusPulse 10s infinite alternate ease-in-out;
+    text-shadow: 0 0 5px var(--text-glow), 0 0 15px var(--text-glow);
 }
 
-@keyframes backgroundShift {
+@keyframes backgroundWave {
     0%, 100% {
         background-position: 0% 0%, 100% 100%;
     }
     50% {
-        background-position: 100% 100%, 0% 0%;
+        background-position: 50% 50%, 50% 50%;
+    }
+}
+
+@keyframes rotateBackground {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes textFocusPulse {
+    0%, 100% {
+        text-shadow: 0 0 5px var(--text-glow), 0 0 10px var(--text-glow);
+    }
+    50% {
+        text-shadow: 0 0 15px var(--text-glow), 0 0 30px var(--text-glow);
     }
 }
