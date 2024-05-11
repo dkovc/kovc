@@ -10,13 +10,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <svg width="0" height="0" style="position: absolute;">
+    <svg style="height: 0; width: 0; position: absolute; visibility: hidden;">
         <defs>
-            <filter id="fancy-glow">
-                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
-                <feOffset in="blur" dx="0" dy="0" result="offsetBlur"/>
+            <filter id="fancy-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blurred"/>
                 <feMerge>
-                    <feMergeNode in="offsetBlur"/>
+                    <feMergeNode in="blurred"/>
                     <feMergeNode in="SourceGraphic"/>
                 </feMerge>
             </filter>
