@@ -3,54 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self';">
     <title>Almost There</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: #000 radial-gradient(circle, #222, #000);
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 100;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            transition: background 1s ease;
-            animation: backgroundFlow 60s ease infinite;
-        }
-        h1 {
-            margin: 0;
-            font-size: 6em;
-            animation: tremble 0.2s infinite, glow 5s infinite alternate;
-            letter-spacing: 5px;
-            filter: url(#fancy-glow);
-        }
-        @keyframes tremble {
-            0%, 100% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(-1px, 1px);
-            }
-            50% {
-                transform: translate(1px, -1px);
-            }
-            75% {
-                transform: translate(-1px, 1px);
-            }
-        }
-        @keyframes backgroundFlow {
-            0%, 100% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-    </style>
+    <link rel="preload" href="fonts/Roboto-Light.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <svg width="0" height="0" style="position: absolute;">
@@ -65,13 +22,9 @@
             </filter>
         </defs>
     </svg>
-    <h1>ko.vc</h1>
-    <script>
-        document.body.addEventListener('mousemove', function(e) {
-            const x = e.clientX / window.innerWidth - 0.5;
-            const y = e.clientY / window.innerHeight - 0.5;
-            document.body.style.backgroundPosition = `${-x * 50}px ${-y * 50}px`;
-        });
-    </script>
+    <main>
+        <h1>ko.vc</h1>
+    </main>
+    <script src="movement.js"></script>
 </body>
 </html>
