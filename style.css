@@ -1,60 +1,33 @@
 @font-face {
     font-family: 'Roboto';
     src: url('fonts/Roboto-Light.ttf') format('truetype');
-    font-weight: 125;
+    font-weight: 100;
     font-style: normal;
 }
 
-:root {
-    --font-family: 'Roboto', sans-serif;
-    --background-primary: #000000;
-    --background-secondary: #0a0a0a;
-    --text-glow: rgba(180, 180, 255, 0.6);
-}
-
 body {
-    color: #fff;
-    font-family: var(--font-family);
+    font-family: 'Roboto', sans-serif;
     font-weight: 100;
+    color: white;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    background: var(--background-primary);
-    background-image: radial-gradient(circle at 50% 50%, var(--background-secondary), transparent 80%);
-    animation: backgroundBreath 60s infinite ease-in-out;
+    background: linear-gradient(270deg, #0a192f, #172a45, #203354);
+    background-size: 600% 600%;
+    animation: GradientBackground 15s ease infinite;
 }
 
 h1 {
     font-size: 6em;
-    color: #ccc;
-    opacity: 0.9;
-    text-shadow: 0 0 5px var(--text-glow), 0 0 15px var(--text-glow);
-    animation: textTremble 0.2s infinite;
+    color: #ccd6f6;
+    text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
 }
 
-@keyframes backgroundBreath {
-    0%, 100% {
-        background-size: 100% 100%;
-    }
-    50% {
-        background-size: 110% 110%;
-    }
-}
-
-@keyframes textTremble {
-    0%, 100% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(-1px, 1px);
-    }
-    50% {
-        transform: translate(1px, -1px);
-    }
-    75% {
-        transform: translate(-1px, 1px);
-    }
+@keyframes GradientBackground {
+    0%, 100% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
 }
