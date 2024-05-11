@@ -7,14 +7,13 @@
 
 :root {
     --font-family: 'Roboto', sans-serif;
-    --background-primary: #121212;
-    --background-secondary: #1a1a1a;
-    --glow-color: rgba(10, 255, 10, 0.7);
+    --background-primary: #000000;
+    --background-secondary: #112233;
+    --background-accent: #332211;
 }
 
 body {
-    background: var(--background-primary) radial-gradient(circle, var(--background-secondary), var(--background-primary));
-    color: #fff;
+    color: #ffffff;
     font-family: var(--font-family);
     font-weight: 100;
     margin: 0;
@@ -23,36 +22,24 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    transition: background 1s ease;
-    animation: backgroundPulse 60s ease infinite;
+    background: var(--background-primary);
+    background-image: radial-gradient(circle at top left, var(--background-secondary), transparent 70%),
+                      radial-gradient(circle at bottom right, var(--background-accent), transparent 70%);
+    animation: backgroundShift 30s infinite alternate ease-in-out;
 }
 
 h1 {
     margin: 0;
     font-size: 6em;
-    animation: glowPulse 5s ease infinite alternate, fadeIn 3s ease-out forwards;
-    letter-spacing: 5px;
-    opacity: 0;  /* Start invisible and fade in */
-    filter: url(#fancy-glow);
-    text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+    color: #aaa;
+    opacity: 0.8;
 }
 
-@keyframes backgroundPulse {
-    0%, 100% { background-color: #121212; }
-    50% { background-color: #1a1a1a; }
-}
-
-@keyframes glowPulse {
+@keyframes backgroundShift {
     0%, 100% {
-        text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+        background-position: 0% 0%, 100% 100%;
     }
     50% {
-        text-shadow: 0 0 20px var(--glow-color), 0 0 40px var(--glow-color);
-    }
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
+        background-position: 100% 100%, 0% 0%;
     }
 }
