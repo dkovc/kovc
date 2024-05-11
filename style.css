@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Roboto';
-    src: url('fonts/Roboto-Light.ttf') format('truetype');
+    src: url('fonts/Roboto-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
 
 :root {
     --font-family: 'Roboto', sans-serif;
-    --background-primary: #0a0f11;
-    --background-secondary: #192233;
-    --background-accent: #2a2f41;
-    --text-glow: rgba(255, 255, 255, 0.6);
+    --background-primary: #050510;
+    --background-secondary: #162033;
+    --background-accent: #252840;
+    --text-glow: rgba(180, 180, 255, 0.8);
 }
 
 body {
@@ -24,42 +24,39 @@ body {
     height: 100vh;
     overflow: hidden;
     background: var(--background-primary);
-    background-image: radial-gradient(circle at top left, var(--background-secondary), transparent 60%),
-                      radial-gradient(circle at bottom right, var(--background-accent), transparent 60%);
-    animation: backgroundWave 30s infinite alternate ease-in-out, rotateBackground 120s linear infinite;
+    background-image: radial-gradient(circle at 10% 20%, var(--background-secondary), transparent 70%),
+                      radial-gradient(circle at 90% 80%, var(--background-accent), transparent 70%);
+    animation: backgroundPulse 20s infinite ease-in-out;
 }
 
 h1 {
     font-size: 6em;
     color: #ccc;
     opacity: 0.9;
-    animation: textFocusPulse 10s infinite alternate ease-in-out;
+    animation: textTremble 0.2s infinite;
     text-shadow: 0 0 5px var(--text-glow), 0 0 15px var(--text-glow);
 }
 
-@keyframes backgroundWave {
+@keyframes backgroundPulse {
     0%, 100% {
-        background-position: 0% 0%, 100% 100%;
+        background-size: 100% 100%;
     }
     50% {
-        background-position: 50% 50%, 50% 50%;
+        background-size: 110% 110%;
     }
 }
 
-@keyframes rotateBackground {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes textFocusPulse {
+@keyframes textTremble {
     0%, 100% {
-        text-shadow: 0 0 5px var(--text-glow), 0 0 10px var(--text-glow);
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-1px, 1px);
     }
     50% {
-        text-shadow: 0 0 15px var(--text-glow), 0 0 30px var(--text-glow);
+        transform: translate(1px, -1px);
+    }
+    75% {
+        transform: translate(-1px, 1px);
     }
 }
