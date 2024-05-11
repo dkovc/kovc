@@ -1,0 +1,36 @@
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --background-primary: #000;
+    --background-secondary: #222;
+}
+body {
+    background: var(--background-primary) radial-gradient(circle, var(--background-secondary), var(--background-primary));
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 100;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background 1s ease;
+    animation: backgroundFlow 60s ease infinite;
+}
+h1 {
+    margin: 0;
+    font-size: 6em;
+    animation: tremble 0.2s infinite, glow 5s infinite alternate;
+    letter-spacing: 5px;
+    filter: url(#fancy-glow);
+}
+@keyframes tremble {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-1px, 1px); }
+    50% { transform: translate(1px, -1px); }
+    75% { transform: translate(-1px, 1px); }
+}
+@keyframes backgroundFlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
