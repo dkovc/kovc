@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self';">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex, nofollow">
     <title>Almost There</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preload" href="fonts/Roboto-Light.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -11,7 +14,11 @@
 </head>
 <body>
     <main>
-        <h1>ko.vc</h1>
+        <div class="container">
+            <img src="images/image1.png" alt="" class="img-responsive">
+            <img src="images/image2.png" alt="" class="img-responsive">
+            <img src="images/image3.png" alt="" class="img-responsive">
+        </div>
     </main>
 </body>
 </html>
