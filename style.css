@@ -41,7 +41,7 @@ h1 {
     text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
     user-select: none;
     animation: textTremble 0.2s infinite;
-    margin: 0;
+    margin: 20px 0;
 }
 
 .container {
