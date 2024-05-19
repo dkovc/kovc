@@ -25,6 +25,24 @@ h1 {
     color: #ccd6f6;
     text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
     animation: textTremble 0.2s infinite;
+    user-select: none;
+}
+
+.container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img-responsive {
+    width: 60px;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
 }
 
 @keyframes pulseBackground {
