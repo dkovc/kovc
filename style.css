@@ -16,6 +16,7 @@ body, html {
     font-family: 'Roboto', sans-serif;
     color: white;
     text-align: center;
+    animation: pulseBackground 3s infinite ease-in-out;
 }
 
 main {
