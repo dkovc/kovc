@@ -16,7 +16,6 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
-    animation: pulseBackground 3s infinite ease-in-out;
 }
 
 main {
@@ -24,62 +23,58 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0;
     width: 100%;
-    animation: fadeIn 1.5s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    to { opacity: 1; }
+    transition: opacity 0.5s ease;
 }
 
 h1 {
     user-select: none;
-    font-size: calc(5vw + 1vh + 1vmin);
+    font-size: 4rem;
     color: #ccd6f6;
     text-shadow: 0 4px 6px rgba(204, 214, 246, 0.7);
-    animation: textTremble 0.2s infinite;
-    margin-bottom: 1vh;
+    margin-bottom: 20px;
 }
 
 .motto {
     user-select: none;
-    font-size: calc(1vw + 1vh + 0.5vmin);
+    font-size: 1.5rem;
     font-style: italic;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
     color: #ccd6f6;
     text-shadow: 0 2px 4px rgba(204, 214, 246, 0.5);
-    animation: textTremble 0.2s infinite;
+    margin-bottom: 20px;
 }
 
 .sphere {
-    display: inline-block;
-    width: 20vmin;
-    height: 20vmin;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: radial-gradient(circle at 50% 50%, #ccd6f6, #283d5b 70%, #0c1b29 90%);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7), inset 0px 5px 15px rgba(255, 255, 255, 0.3);
-    position: relative;
-    animation: roll 6s linear infinite;
-    margin-bottom: 2vh;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 5px 15px rgba(255, 255, 255, 0.3);
+    margin-bottom: 30px;
 }
 
-@keyframes textTremble {
-    0%, 100% { transform: translate(0, 0); }
-    25% { transform: translate(-1px, 1px); }
-    50% { transform: translate(1px, -1px); }
-    75% { transform: translate(-1px, 1px); }
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .motto {
+        font-size: 1.2rem;
+    }
+    .sphere {
+        width: 120px;
+        height: 120px;
+    }
 }
 
-@keyframes roll {
-    0%, 100% { transform: rotateZ(0deg) translateZ(0); }
-    50% { transform: rotateZ(180deg) translateZ(-30px); }
-}
-
-@keyframes pulseBackground {
-    0%, 100% { background-color: #000; }
-    50% { background-color: #111; }
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .motto {
+        font-size: 1rem;
+    }
+    .sphere {
+        width: 100px;
+        height: 100px;
+    }
 }
