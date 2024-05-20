@@ -24,6 +24,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 20px;
     transition: opacity 0.5s ease;
 }
 
@@ -33,6 +34,7 @@ h1 {
     color: #ccd6f6;
     text-shadow: 0 4px 6px rgba(204, 214, 246, 0.7);
     margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .motto {
