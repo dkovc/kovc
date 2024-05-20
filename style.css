@@ -43,7 +43,7 @@ h1, .motto {
 }
 
 .motto {
-    font-size: 2em; /* Adjusted via media queries below */
+    font-size: 2em;
     font-style: italic;
     margin-top: 10px;
     white-space: nowrap;
@@ -104,7 +104,6 @@ h1, .motto {
     opacity: 0.6;
 }
 
-/* Responsive typography adjustments */
 @media (max-width: 1200px) {
     .motto { font-size: 1.75em; }
 }
