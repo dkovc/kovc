@@ -37,7 +37,7 @@ h1 {
     user-select: none;
     font-size: calc(5vw + 1vh + 1vmin);
     color: #ccd6f6;
-    text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
+    text-shadow: 0 4px 6px rgba(204, 214, 246, 0.7);
     animation: textTremble 0.2s infinite;
     margin-bottom: 0.5em;
 }
@@ -48,9 +48,9 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%; /* Prevents overflow */
+    max-width: 100%;
     color: #ccd6f6;
-    text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
+    text-shadow: 0 2px 4px rgba(204, 214, 246, 0.5);
     animation: textTremble 0.2s infinite;
     margin-top: 0;
 }
