@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('fonts/Roboto-Light.ttf') format('truetype');
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
@@ -13,7 +13,7 @@ body, html {
     align-items: center;
     justify-content: center;
     background-color: #000;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
     animation: pulseBackground 3s infinite ease-in-out;
