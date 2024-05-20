@@ -46,6 +46,11 @@ h1, .motto {
     font-size: 2em;
     font-style: italic;
     margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90vw;
+    max-width: 100%;
 }
 
 .container {
@@ -75,8 +80,8 @@ h1, .motto {
 }
 
 @keyframes roll {
-    0% { transform: rotateZ(0deg); }
-    100% { transform: rotateZ(360deg); }
+    0%, 100% { transform: rotateZ(0deg) translateZ(0); }
+    50% { transform: rotateZ(180deg) translateZ(-30px); }
 }
 
 .sphere {
@@ -87,7 +92,7 @@ h1, .motto {
     background: radial-gradient(circle at 50% 50%, #ccd6f6, #283d5b 70%, #0c1b29 90%);
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7), inset 0px 5px 15px rgba(255, 255, 255, 0.3);
     position: relative;
-    animation: roll 4s linear infinite;
+    animation: roll 6s linear infinite;
 }
 
 .sphere:before {
