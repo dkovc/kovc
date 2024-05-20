@@ -35,18 +35,24 @@ main {
 
 h1, .motto {
     user-select: none;
-    font-size: 6em;
     color: #ccd6f6;
     text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
     animation: textTremble 0.2s infinite;
-    margin: 20px 0;
+}
+
+h1 {
+    font-size: 6em;
+    margin: 0 0 10px 0;
 }
 
 .motto {
-    font-size: 2em;
+    font-size: 2.5em;
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 0;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
 }
 
 .container {
@@ -105,17 +111,21 @@ h1, .motto {
 }
 
 @media (max-width: 1200px) {
-    .motto { font-size: 1.75em; }
+    .motto { font-size: 2.2em; }
 }
 
 @media (max-width: 992px) {
-    .motto { font-size: 1.5em; }
+    .motto { font-size: 2em; }
 }
 
 @media (max-width: 768px) {
-    .motto { font-size: 1.25em; }
+    .motto { font-size: 1.8em; }
 }
 
 @media (max-width: 576px) {
-    .motto { font-size: 1em; }
+    .motto { font-size: 1.6em; }
+}
+
+@media (max-width: 480px) {
+    .motto { font-size: 1.4em; }
 }
