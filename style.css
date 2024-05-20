@@ -43,14 +43,10 @@ h1, .motto {
 }
 
 .motto {
-    font-size: 2em;
+    font-size: 2em; /* Adjusted via media queries below */
     font-style: italic;
     margin-top: 10px;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 90vw;
-    max-width: 100%;
 }
 
 .container {
@@ -106,4 +102,21 @@ h1, .motto {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70%);
     border-radius: 50%;
     opacity: 0.6;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 1200px) {
+    .motto { font-size: 1.75em; }
+}
+
+@media (max-width: 992px) {
+    .motto { font-size: 1.5em; }
+}
+
+@media (max-width: 768px) {
+    .motto { font-size: 1.25em; }
+}
+
+@media (max-width: 576px) {
+    .motto { font-size: 1em; }
 }
