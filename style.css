@@ -39,16 +39,16 @@ h1 {
     color: #ccd6f6;
     text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
     animation: textTremble 0.2s infinite;
-    margin: 0 0 10px 0;
+    margin-bottom: 0.5em;
 }
 
 .motto {
-    font-size: 4vw;
+    font-size: calc(1vw + 1vh + 0.5vmin);
     font-style: italic;
-    margin-top: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
     color: #ccd6f6;
 }
 
