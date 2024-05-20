@@ -55,32 +55,6 @@ h1 {
     margin-top: 0;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.img-responsive {
-    width: 60px;
-    height: auto;
-    pointer-events: none;
-    user-select: none;
-}
-
-@keyframes pulseBackground {
-    0%, 100% { background-color: #000; }
-    50% { background-color: #111; }
-}
-
-@keyframes textTremble {
-    0%, 100% { transform: translate(0, 0); }
-    25% { transform: translate(-1px, 1px); }
-    50% { transform: translate(1px, -1px); }
-    75% { transform: translate(-1px, 1px); }
-}
-
 .sphere {
     display: inline-block;
     width: 150px;
@@ -90,4 +64,5 @@ h1 {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7), inset 0px 5px 15px rgba(255, 255, 255, 0.3);
     position: relative;
     animation: roll 6s linear infinite;
+    margin-bottom: 20px;
 }
