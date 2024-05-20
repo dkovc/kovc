@@ -43,6 +43,7 @@ h1 {
 }
 
 .motto {
+    user-select: none;
     font-size: calc(1vw + 1vh + 0.5vmin);
     font-style: italic;
     white-space: nowrap;
