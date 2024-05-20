@@ -33,12 +33,13 @@ main {
     to { opacity: 1; }
 }
 
-h1 {
+h1, .motto {
+    user-select: none;
     font-size: 6em;
     color: #ccd6f6;
     text-shadow: 0 0 20px rgba(204, 214, 246, 0.5);
     animation: textTremble 0.2s infinite;
-    user-select: none;
+    margin: 20px 0;
 }
 
 .container {
