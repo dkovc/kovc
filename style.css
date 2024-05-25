@@ -71,7 +71,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Responsive Design Adjustments */
 @media (max-width: 768px) {
     h1 { font-size: 3rem; }
     .motto { font-size: 1.2rem; }
