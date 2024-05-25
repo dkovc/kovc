@@ -1,3 +1,17 @@
+:root {
+    --main-bg-color: #000;
+    --main-text-color: #ccd6f6;
+    --accent-color: #283d5b;
+    --font-family-main: 'Montserrat', sans-serif;
+    --font-size-large: 4rem;
+    --font-size-medium: 1.5rem;
+    --font-size-small: 1rem;
+    --shadow-main: 0 4px 6px rgba(204, 214, 246, 0.7);
+    --shadow-motto: 0 2px 4px rgba(204, 214, 246, 0.5);
+    --gradient-sphere: radial-gradient(circle at 50% 50%, var(--main-text-color), var(--accent-color) 70%, #0c1b29 90%);
+    --box-shadow-sphere: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
 @font-face {
     font-family: 'Montserrat';
     src: url('fonts/Montserrat-Thin.ttf') format('truetype');
@@ -5,16 +19,16 @@
     font-style: normal;
 }
 
-body, html {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: var(--font-family-main);
     text-align: center;
 }
 
@@ -33,18 +47,18 @@ h1, .motto {
 }
 
 h1 {
-    font-size: 4rem;
-    color: #ccd6f6;
-    text-shadow: 0 4px 6px rgba(204, 214, 246, 0.7);
+    font-size: var(--font-size-large);
+    color: var(--main-text-color);
+    text-shadow: var(--shadow-main);
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
 .motto {
-    font-size: 1.5rem;
+    font-size: var(--font-size-medium);
     font-style: italic;
-    color: #ccd6f6;
-    text-shadow: 0 2px 4px rgba(204, 214, 246, 0.5);
+    color: var(--main-text-color);
+    text-shadow: var(--shadow-motto);
     margin-bottom: 20px;
 }
 
@@ -52,11 +66,12 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #ccd6f6, #283d5b 70%, #0c1b29 90%);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 5px 15px rgba(255, 255, 255, 0.3);
+    background: var(--gradient-sphere);
+    box-shadow: var(--box-shadow-sphere);
     margin-bottom: 30px;
 }
 
+/* Responsive Design Adjustments */
 @media (max-width: 768px) {
     h1 { font-size: 3rem; }
     .motto { font-size: 1.2rem; }
@@ -65,6 +80,6 @@ h1 {
 
 @media (max-width: 480px) {
     h1 { font-size: 2rem; }
-    .motto { font-size: 1rem; }
+    .motto { font-size: var(--font-size-small); }
     .sphere { width: 100px; height: 100px; }
 }
