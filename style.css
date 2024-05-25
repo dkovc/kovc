@@ -28,8 +28,11 @@ main {
     transition: opacity 0.5s ease;
 }
 
-h1 {
+h1, .motto {
     user-select: none;
+}
+
+h1 {
     font-size: 4rem;
     color: #ccd6f6;
     text-shadow: 0 4px 6px rgba(204, 214, 246, 0.7);
@@ -38,7 +41,6 @@ h1 {
 }
 
 .motto {
-    user-select: none;
     font-size: 1.5rem;
     font-style: italic;
     color: #ccd6f6;
@@ -56,27 +58,13 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
-    .motto {
-        font-size: 1.2rem;
-    }
-    .sphere {
-        width: 120px;
-        height: 120px;
-    }
+    h1 { font-size: 3rem; }
+    .motto { font-size: 1.2rem; }
+    .sphere { width: 120px; height: 120px; }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-    .motto {
-        font-size: 1rem;
-    }
-    .sphere {
-        width: 100px;
-        height: 100px;
-    }
+    h1 { font-size: 2rem; }
+    .motto { font-size: 1rem; }
+    .sphere { width: 100px; height: 100px; }
 }
