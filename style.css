@@ -17,6 +17,10 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
 }
 
 main {
@@ -27,10 +31,6 @@ main {
     width: 100%;
     padding: 20px;
     transition: opacity 0.5s ease;
-}
-
-h1, .motto {
-    user-select: none;
 }
 
 h1 {
