@@ -16,7 +16,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
@@ -25,13 +24,15 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-    animation: breathingBackground 5s ease-in-out infinite alternate;
+    background: linear-gradient(270deg, #000, #252525, #000, #252525);
+    background-size: 800% 800%;
+    animation: AnimatedGradient 30s ease infinite;
 }
 
-@keyframes breathingBackground {
-    0% { background-color: #000; }
-    50% { background-color: #121212; }
-    100% { background-color: #000; }
+@keyframes AnimatedGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 main {
@@ -67,13 +68,13 @@ h1 {
     background: radial-gradient(circle at 50% 50%, #ccd6f6, transparent 70%);
     box-shadow: 0 10px 30px rgba(204, 214, 246, 0.7), inset 0 5px 15px rgba(204, 214, 246, 0.3);
     margin-bottom: 30px;
-    animation: pulseAnimation 3s ease-in-out infinite;
+    animation: rollBall 6s linear infinite;
 }
 
-@keyframes pulseAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+@keyframes rollBall {
+    0% { transform: rotate(0deg) translateX(0); }
+    50% { transform: rotate(180deg) translateX(150px); }
+    100% { transform: rotate(360deg) translateX(0); }
 }
 
 @media (max-width: 768px) {
