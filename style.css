@@ -15,7 +15,7 @@ html, body {
     justify-content: center;
     background-color: #000;
     font-family: 'Montserrat', sans-serif;
-    color: #FFF;
+    color: white;
     text-align: center;
 }
 
@@ -31,12 +31,12 @@ main {
 
 h1, .motto {
     user-select: none;
-    color: #ccd6f6;
-    text-shadow: 0 2px 4px rgba(204, 214, 246, 0.5);
 }
 
 h1 {
     font-size: 4rem;
+    color: #ccd6f6;
+    text-shadow: 0 0 8px rgba(204, 214, 246, 0.8);
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
@@ -44,6 +44,8 @@ h1 {
 .motto {
     font-size: 1.5rem;
     font-style: italic;
+    color: #ccd6f6;
+    text-shadow: 0 0 6px rgba(204, 214, 246, 0.6);
     margin-bottom: 20px;
 }
 
