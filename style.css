@@ -17,14 +17,14 @@ html, body {
     align-items: center;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    color: #e1bee7;
+    color: #d1c4e9;
     text-align: center;
     user-select: none;
     touch-action: manipulation;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-    background-color: #121212;
+    background-color: #000; 
 }
 
 main {
@@ -39,15 +39,15 @@ main {
 
 h1 {
     font-size: 4rem;
-    color: #9575cd;
+    color: #673ab7;
     margin-bottom: 20px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .motto {
     font-size: 1.5rem;
     font-style: italic;
-    color: #b39ddb;
+    color: #9575cd;
     margin-bottom: 20px;
 }
 
@@ -55,7 +55,7 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(140deg, rgba(103, 58, 183, 0.7), rgba(149, 117, 205, 0.5));
+    background: linear-gradient(140deg, rgba(103, 58, 183, 0.6), rgba(103, 58, 183, 0.3));
     box-shadow: 0 0 20px rgba(103, 58, 183, 0.7), inset 0 0 15px rgba(149, 117, 205, 0.5);
     margin-bottom: 30px;
     animation: rotateSphere 10s linear infinite;
