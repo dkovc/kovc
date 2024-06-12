@@ -57,35 +57,14 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle, #ccd6f6 0%, #ccd6f6 50%, transparent 70%);
-    box-shadow: 0 0 20px rgba(204, 214, 246, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
+    background-color: #333;
     margin-bottom: 30px;
-    position: relative;
-    animation: rotateNexus 20s linear infinite;
+    animation: rotateSphere 20s linear infinite;
 }
 
-.sphere::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, transparent, #ccd6f6 30%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: pulsate 2s infinite ease-in-out;
-}
-
-@keyframes rotateNexus {
+@keyframes rotateSphere {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-@keyframes pulsate {
-    0% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.7; }
 }
 
 @media (max-width: 768px) {
@@ -95,7 +74,7 @@ h1 {
     .motto {
         font-size: 1.2rem;
     }
-    .sphere, .sphere::before {
+    .sphere {
         width: 120px;
         height: 120px;
     }
@@ -108,7 +87,7 @@ h1 {
     .motto {
         font-size: 1rem;
     }
-    .sphere, .sphere::before {
+    .sphere {
         width: 100px;
         height: 100px;
     }
