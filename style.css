@@ -16,15 +16,15 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #000;
     font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF; 
+    color: white;
     text-align: center;
     user-select: none;
     touch-action: manipulation;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-    background-color: #000; 
 }
 
 main {
@@ -34,18 +34,22 @@ main {
     justify-content: center;
     width: 100%;
     padding: 20px;
+    transition: opacity 0.5s ease;
 }
 
 h1 {
     font-size: 4rem;
-    color: #673ab7; 
+    color: #ccd6f6;
+    text-shadow: 0 0 5px rgba(204, 214, 246, 0.7);
     margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .motto {
     font-size: 1.5rem;
     font-style: italic;
-    color: #b39ddb; 
+    color: #ccd6f6;
+    text-shadow: 0 0 3px rgba(204, 214, 246, 0.5);
     margin-bottom: 20px;
 }
 
@@ -53,15 +57,9 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(140deg, #673ab7, #9575cd); 
-    box-shadow: 0 0 20px #673ab7; 
+    background: radial-gradient(circle at 50% 50%, #ccd6f6, #283d5b 70%, #0c1b29 90%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 5px 15px rgba(255, 255, 255, 0.3);
     margin-bottom: 30px;
-    animation: rotateSphere 10s linear infinite;
-}
-
-@keyframes rotateSphere {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 768px) {
