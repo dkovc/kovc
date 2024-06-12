@@ -16,9 +16,9 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(145deg, #20232a, #364156);
-    background-size: 400% 400%;
-    animation: Gradient 20s ease infinite;
+    background: linear-gradient(145deg, #0A192F, #172A45, #303C55);
+    background-size: 800% 800%;
+    animation: Gradient 30s ease infinite;
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
@@ -39,20 +39,8 @@ main {
     transition: opacity 0.5s ease;
 }
 
-h1 {
-    font-size: 4rem;
-    color: #ccd6f6;
-    text-shadow: 0 0 5px rgba(204, 214, 246, 0.7);
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-.motto {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: #ccd6f6;
-    text-shadow: 0 0 3px rgba(204, 214, 246, 0.5);
-    margin-bottom: 20px;
+h1, .motto {
+    transition: color 1s ease;
 }
 
 .sphere {
@@ -60,19 +48,20 @@ h1 {
     height: 150px;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, #ccd6f6, transparent 70%);
-    animation: rollSphere 10s linear infinite;
+    animation: rollSphere 20s linear infinite;
     margin-bottom: 30px;
 }
 
 @keyframes rollSphere {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); background: radial-gradient(circle at 30% 30%, #ccd6f6, transparent 70%); }
+    50% { transform: rotate(180deg); background: radial-gradient(circle at 30% 30%, #202E50, transparent 70%); }
+    100% { transform: rotate(360deg); background: radial-gradient(circle at 30% 30%, #ccd6f6, transparent 70%); }
 }
 
 @keyframes Gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; color: #FFFFFF; }
+    50% { background-position: 100% 50%; color: #D1D5DB; }
+    100% { background-position: 0% 50%; color: #FFFFFF; }
 }
 
 @media (max-width: 768px) {
