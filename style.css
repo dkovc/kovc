@@ -57,22 +57,21 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle, #ccd6f6 0%, #ccd6f6 30%, transparent 70%);
-    box-shadow: 0 0 20px rgba(204, 214, 246, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
+    background: radial-gradient(circle, #ccd6f6 0%, #ccd6f6 50%, transparent 70%);
+    box-shadow: 0 0 20px rgba(204, 214, 246, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
     margin-bottom: 30px;
     position: relative;
     animation: rotateNexus 20s linear infinite;
-    background-size: 400% 400%;
 }
 
-.sphere::before, .sphere::after {
+.sphere::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, transparent, transparent 70%, #ccd6f6 70%, transparent 90%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, transparent, #ccd6f6 30%, transparent 70%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: pulsate 2s infinite ease-in-out;
@@ -84,9 +83,9 @@ h1 {
 }
 
 @keyframes pulsate {
-    0% { transform: scale(0.6); opacity: 0.7; }
-    50% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(0.6); opacity: 0.7; }
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
 }
 
 @media (max-width: 768px) {
@@ -96,7 +95,7 @@ h1 {
     .motto {
         font-size: 1.2rem;
     }
-    .sphere, .sphere::before, .sphere::after {
+    .sphere, .sphere::before {
         width: 120px;
         height: 120px;
     }
@@ -109,7 +108,7 @@ h1 {
     .motto {
         font-size: 1rem;
     }
-    .sphere, .sphere::before, .sphere::after {
+    .sphere, .sphere::before {
         width: 100px;
         height: 100px;
     }
