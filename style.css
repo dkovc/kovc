@@ -16,9 +16,9 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(270deg, #333333, #ddc3a5);
+    background: linear-gradient(145deg, #20232a, #364156);
     background-size: 400% 400%;
-    animation: Gradient 15s ease infinite;
+    animation: Gradient 20s ease infinite;
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
@@ -55,37 +55,18 @@ h1 {
     margin-bottom: 20px;
 }
 
-.hexagon {
-    width: 100px;
-    height: 57.74px;
-    background-color: #ccd6f6;
-    position: relative;
-    margin-bottom: 20px;
-    animation: float 4s ease-in-out infinite;
+.sphere {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ccd6f6, transparent 70%);
+    animation: rollSphere 10s linear infinite;
+    margin-bottom: 30px;
 }
 
-.hexagon:before, .hexagon:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-}
-
-.hexagon:before {
-    bottom: 100%;
-    border-bottom: 28.87px solid #ccd6f6;
-}
-
-.hexagon:after {
-    top: 100%;
-    width: 0;
-    border-top: 28.87px solid #ccd6f6;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+@keyframes rollSphere {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 @keyframes Gradient {
@@ -101,6 +82,10 @@ h1 {
     .motto {
         font-size: 1.2rem;
     }
+    .sphere {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -109,5 +94,9 @@ h1 {
     }
     .motto {
         font-size: 1rem;
+    }
+    .sphere {
+        width: 100px;
+        height: 100px;
     }
 }
