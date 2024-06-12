@@ -4,6 +4,7 @@
          url('fonts/Montserrat-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
 }
 
 html, body {
@@ -38,7 +39,7 @@ main {
 h1 {
     font-size: 4rem;
     color: #ccd6f6;
-    text-shadow: 0 0 10px rgba(204, 214, 246, 0.9), 0 0 20px rgba(204, 214, 246, 0.9);
+    text-shadow: 0 0 15px rgba(204, 214, 246, 0.9);
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
@@ -47,7 +48,7 @@ h1 {
     font-size: 1.5rem;
     font-style: italic;
     color: #ccd6f6;
-    text-shadow: 0 0 8px rgba(204, 214, 246, 0.8), 0 0 16px rgba(204, 214, 246, 0.8);
+    text-shadow: 0 0 10px rgba(204, 214, 246, 0.8);
     margin-bottom: 20px;
 }
 
