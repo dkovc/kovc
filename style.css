@@ -17,14 +17,14 @@ html, body {
     align-items: center;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    color: #dcd0ff;
+    color: #e1bee7;
     text-align: center;
     user-select: none;
     touch-action: manipulation;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-    background-color: #000;
+    background-color: #121212;
 }
 
 main {
@@ -40,7 +40,6 @@ main {
 h1 {
     font-size: 4rem;
     color: #9575cd;
-    text-shadow: 0 0 20px #9575cd;
     margin-bottom: 20px;
     letter-spacing: 3px;
 }
@@ -49,7 +48,6 @@ h1 {
     font-size: 1.5rem;
     font-style: italic;
     color: #b39ddb;
-    text-shadow: 0 0 10px #b39ddb;
     margin-bottom: 20px;
 }
 
@@ -57,10 +55,10 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #673ab7;
-    opacity: 0.85;
+    background: linear-gradient(140deg, rgba(103, 58, 183, 0.7), rgba(149, 117, 205, 0.5));
+    box-shadow: 0 0 20px rgba(103, 58, 183, 0.7), inset 0 0 15px rgba(149, 117, 205, 0.5);
     margin-bottom: 30px;
-    animation: rotateSphere 20s linear infinite;
+    animation: rotateSphere 10s linear infinite;
 }
 
 @keyframes rotateSphere {
