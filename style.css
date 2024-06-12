@@ -24,15 +24,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-    background: linear-gradient(270deg, #121212, #202020, #121212, #202020);
-    background-size: 400% 400%;
-    animation: AnimatedGradient 60s ease infinite;
-}
-
-@keyframes AnimatedGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    background-color: #000;
 }
 
 main {
@@ -65,13 +57,13 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #ccd6f6, transparent 70%);
-    box-shadow: 0 10px 30px rgba(204, 214, 246, 0.7), inset 0 5px 15px rgba(204, 214, 246, 0.3);
+    background: radial-gradient(circle, #ccd6f6 0%, #ccd6f6 40%, transparent 70%);
+    box-shadow: 0 0 20px rgba(204, 214, 246, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
     margin-bottom: 30px;
-    animation: rollInPlace 6s linear infinite;
+    animation: rotateNexus 8s linear infinite;
 }
 
-@keyframes rollInPlace {
+@keyframes rotateNexus {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
