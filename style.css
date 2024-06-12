@@ -25,6 +25,13 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
+    animation: breathingBackground 5s ease-in-out infinite alternate;
+}
+
+@keyframes breathingBackground {
+    0% { background-color: #000; }
+    50% { background-color: #121212; }
+    100% { background-color: #000; }
 }
 
 main {
@@ -35,9 +42,6 @@ main {
     width: 100%;
     padding: 20px;
     transition: opacity 0.5s ease;
-    background: linear-gradient(145deg, #121212, #1d1d1d);
-    border-radius: 10px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
 }
 
 h1 {
@@ -63,6 +67,13 @@ h1 {
     background: radial-gradient(circle at 50% 50%, #ccd6f6, transparent 70%);
     box-shadow: 0 10px 30px rgba(204, 214, 246, 0.7), inset 0 5px 15px rgba(204, 214, 246, 0.3);
     margin-bottom: 30px;
+    animation: pulseAnimation 3s ease-in-out infinite;
+}
+
+@keyframes pulseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 @media (max-width: 768px) {
