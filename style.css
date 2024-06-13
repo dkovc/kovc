@@ -88,6 +88,19 @@ h1 {
     }
 }
 
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+    .motto {
+        font-size: 1.6rem;
+    }
+    .sphere {
+        width: 180px;
+        height: 180px;
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 3.5rem;
