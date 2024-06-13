@@ -10,26 +10,26 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
+    background-color: #111;
     font-family: 'Montserrat', sans-serif;
-    color: #FFF;
+    color: #D6BBF9;
     text-align: center;
     user-select: none;
     touch-action: manipulation;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-    background: linear-gradient(135deg, #242424 40%, #484848 100%);
+    background: linear-gradient(135deg, #191919 40%, #2D2D2D 100%);
 }
 
 main {
@@ -38,39 +38,35 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px;
     transition: opacity 0.5s ease;
 }
 
 h1 {
     font-size: 4rem;
-    color: #ccd6f6;
-    text-shadow: 0 0 8px rgba(204, 214, 246, 0.8);
-    margin-bottom: 20px;
+    color: #E4C1F9;
+    text-shadow: 0 0 15px #A85FF7;
     letter-spacing: 2px;
     animation: fadeIn 2s ease-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
+    from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 .motto {
     font-size: 1.5rem;
     font-style: italic;
-    color: #ccd6f6;
-    text-shadow: 0 0 4px rgba(204, 214, 246, 0.6);
-    margin-bottom: 20px;
+    color: #CCA6F9;
+    text-shadow: 0 0 8px #9055FF;
 }
 
 .sphere {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #ccd6f6, #283d5b 70%, #0c1b29 90%);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 5px 15px rgba(255, 255, 255, 0.3);
-    margin-bottom: 30px;
+    background: radial-gradient(circle at 50% 50%, #D6BBF9, #8A54FF 70%, #5D3A9B 90%);
+    box-shadow: 0 15px 35px rgba(55, 0, 179, 0.8), inset 0 10px 20px rgba(179, 119, 253, 0.4);
     transition: transform 0.3s ease;
 }
 
