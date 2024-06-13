@@ -39,7 +39,7 @@ main {
 
 h1 {
     font-size: 4rem;
-    color: #b794f4;
+    color: #b794f4; 
     text-shadow: 0 2px 4px rgba(183, 148, 244, 0.5);
     margin-bottom: 20px;
     letter-spacing: 2px;
@@ -48,7 +48,7 @@ h1 {
 .motto {
     font-size: 1.5rem;
     font-style: italic;
-    color: #d1c4e9;
+    color: #d1c4e9; 
     text-shadow: 0 1px 3px rgba(209, 196, 233, 0.5);
     margin-bottom: 20px;
 }
@@ -57,9 +57,19 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #b794f4, #512da8 70%, #311b92 90%);
-    box-shadow: 0 0 10px 5px rgba(183, 148, 244, 0.5);
+    background: radial-gradient(circle at 40% 30%, #ffffff, #b794f4 30%, #512da8 60%, #311b92 90%);
+    box-shadow: 0 0 20px 10px rgba(183, 148, 244, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: rotate 60s infinite linear;
     margin-bottom: 30px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 768px) {
