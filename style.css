@@ -22,66 +22,78 @@ html, body {
     justify-content: center;
     background-color: #111;
     font-family: 'Montserrat', sans-serif;
-    color: #D6BBF9;
+    color: white;
     text-align: center;
     user-select: none;
     touch-action: manipulation;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-    background: linear-gradient(135deg, #191919 40%, #2D2D2D 100%);
+    background: linear-gradient(135deg, #121212 40%, #292929 100%);
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    transition: opacity 0.5s ease;
+    justify-content: space-evenly;
+    width: 80%;
+    max-width: 800px;
+    height: 90%;
+    margin: auto;
+    padding: 50px;
+    transition: opacity 1s ease-out;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 h1 {
     font-size: 4rem;
     color: #E4C1F9;
-    text-shadow: 0 0 15px #A85FF7;
-    letter-spacing: 2px;
-    animation: fadeIn 2s ease-out;
+    text-shadow: 0 0 20px #A85FF7;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .motto {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-style: italic;
     color: #CCA6F9;
-    text-shadow: 0 0 8px #9055FF;
+    text-shadow: 0 0 10px #9055FF;
+    margin-bottom: 50px;
 }
 
 .sphere {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background: radial-gradient(circle at 50% 50%, #D6BBF9, #8A54FF 70%, #5D3A9B 90%);
-    box-shadow: 0 15px 35px rgba(55, 0, 179, 0.8), inset 0 10px 20px rgba(179, 119, 253, 0.4);
-    transition: transform 0.3s ease;
+    box-shadow: 0 20px 60px rgba(55, 0, 179, 0.9), inset 0 10px 30px rgba(179, 119, 253, 0.5);
+    margin-bottom: 60px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
 .sphere:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
     h1 { font-size: 3rem; }
-    .motto { font-size: 1.2rem; }
-    .sphere { width: 120px; height: 120px; }
+    .motto { font-size: 1.5rem; }
+    .sphere { width: 140px; height: 140px; }
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2rem; }
-    .motto { font-size: 1rem; }
+    h1 { font-size: 2.5rem; }
+    .motto { font-size: 1.2rem; }
     .sphere { width: 100px; height: 100px; }
 }
