@@ -34,7 +34,7 @@ main {
     justify-content: center;
     width: 100%;
     padding: 20px;
-    perspective: 500px;
+    perspective: 600px;
 }
 
 h1 {
@@ -57,21 +57,27 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #ffffff 10%, #b794f4 50%, #512da8 90%, #311b92 100%);
-    box-shadow: 0 0 20px 10px rgba(104, 58, 183, 0.5), 
+    background: radial-gradient(circle at 50% 50%, #ffffff 5%, #b794f4 50%, #512da8 90%, #311b92 100%);
+    box-shadow: 0 0 20px 10px rgba(104, 58, 183, 0.5),
                 inset 0 0 20px rgba(255, 255, 255, 0.5);
     position: relative;
     transform-style: preserve-3d;
-    animation: rotateSphere 10s infinite linear;
+    animation: rollSphere 8s infinite linear;
     margin-bottom: 30px;
 }
 
-@keyframes rotateSphere {
-    0% {
-        transform: rotate3d(1, 1, 0, 0deg);
+@keyframes rollSphere {
+    0%, 100% {
+        transform: rotate3d(0, 1, 0, 0deg) rotate3d(1, 0, 0, 0deg);
     }
-    100% {
-        transform: rotate3d(1, 1, 0, 360deg);
+    25% {
+        transform: rotate3d(0, 1, 0, 360deg) rotate3d(1, 0, 0, 180deg);
+    }
+    50% {
+        transform: rotate3d(0, 1, 0, 720deg) rotate3d(1, 0, 0, 360deg);
+    }
+    75% {
+        transform: rotate3d(0, 1, 0, 1080deg) rotate3d(1, 0, 0, 540deg);
     }
 }
 
