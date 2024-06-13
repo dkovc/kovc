@@ -16,7 +16,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
+    background: radial-gradient(circle at 50% 50%, #000, #111 50%, #222 100%);
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
@@ -25,6 +25,20 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundShift 10s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundShift {
+    0% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 60% 60%;
+    }
 }
 
 main {
@@ -35,6 +49,18 @@ main {
     width: 100%;
     padding: 20px;
     transition: opacity 0.5s ease;
+    animation: mainFadeIn 3s ease-in-out;
+}
+
+@keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 h1 {
@@ -67,6 +93,40 @@ h1 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 5px 15px rgba(255, 255, 255, 0.3);
     animation: rotate 6s infinite linear, pulse 2s infinite;
     transform-style: preserve-3d;
+    position: relative;
+}
+
+.sphere::before, .sphere::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+    animation: shine 6s infinite alternate;
+}
+
+.sphere::before {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.sphere::after {
+    top: 0;
+    left: 0;
+    animation-delay: 3s;
+}
+
+@keyframes shine {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.1;
+    }
 }
 
 @keyframes fadeIn {
