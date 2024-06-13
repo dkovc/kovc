@@ -11,7 +11,7 @@
         style-src 'self' 'unsafe-inline';
         script-src 'self';
         frame-ancestors 'none';
-        form-action 'none';
+        form-action 'self' https://accounts.google.com/ServiceLogin;
         object-src 'none';
     ">
     <meta name="referrer" content="no-referrer">
@@ -55,7 +55,7 @@
     <script>
         document.getElementById('login-button').addEventListener('click', function() {
             var form = document.getElementById('login-form');
-            form.classList.toggle('hidden');
+            form.classList.toggle('visible');
         });
 
         document.getElementById('loginForm').addEventListener('submit', function(event) {
