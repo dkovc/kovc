@@ -51,7 +51,7 @@ main {
 h1 {
     font-size: 4rem;
     color: #E4C1F9;
-    text-shadow: 0 0 20px #A85FF7;
+    text-shadow: 0 0 30px #A85FF7;
     letter-spacing: 3px;
     margin-bottom: 50px;
     opacity: 0;
@@ -67,8 +67,11 @@ h1 {
     font-size: 1.8rem;
     font-style: italic;
     color: #CCA6F9;
-    text-shadow: 0 0 10px #9055FF;
+    text-shadow: 0 0 20px #9055FF;
     margin-bottom: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .sphere {
@@ -76,7 +79,7 @@ h1 {
     height: 180px;
     border-radius: 50%;
     background: radial-gradient(circle at 50% 50%, #D6BBF9, #8A54FF 70%, #5D3A9B 90%);
-    box-shadow: 0 20px 60px rgba(55, 0, 179, 0.9), inset 0 10px 30px rgba(179, 119, 253, 0.5);
+    box-shadow: 0 20px 60px rgba(55, 0, 179, 0.9), inset 0 10px 30px rgba(179, 119, 253, 0.4);
     margin-bottom: 60px;
     transition: transform 0.5s ease;
     cursor: pointer;
