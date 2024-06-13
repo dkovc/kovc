@@ -203,3 +203,63 @@ h1 {
         height: 120px;
     }
 }
+
+#login-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #a8c0ff;
+    background: transparent;
+    border: 2px solid #a8c0ff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+#login-button:hover {
+    background: #a8c0ff;
+    color: #111;
+}
+
+.login-form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+:target .login-form {
+    display: flex;
+    opacity: 1;
+}
+
+.login-form input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #a8c0ff;
+    background: #111;
+    color: #e0e0e0;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#submit-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #a8c0ff;
+    background: transparent;
+    border: 2px solid #a8c0ff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#submit-button:hover {
+    background: #a8c0ff;
+    color: #111;
+}
