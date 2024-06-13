@@ -34,12 +34,12 @@ main {
     justify-content: center;
     width: 100%;
     padding: 20px;
-    transition: opacity 0.5s ease;
+    perspective: 500px;
 }
 
 h1 {
     font-size: 4rem;
-    color: #b794f4; 
+    color: #b794f4;
     text-shadow: 0 2px 4px rgba(183, 148, 244, 0.5);
     margin-bottom: 20px;
     letter-spacing: 2px;
@@ -48,7 +48,7 @@ h1 {
 .motto {
     font-size: 1.5rem;
     font-style: italic;
-    color: #d1c4e9; 
+    color: #d1c4e9;
     text-shadow: 0 1px 3px rgba(209, 196, 233, 0.5);
     margin-bottom: 20px;
 }
@@ -57,21 +57,21 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle at 40% 40%, #ffffff 10%, #b794f4 40%, #512da8 75%, #311b92 100%);
-    box-shadow: 0 0 20px 10px rgba(104, 58, 183, 0.3), 
-                0 0 60px rgba(183, 148, 244, 0.7), 
-                inset 0 0 30px rgba(255, 255, 255, 0.5);
+    background: radial-gradient(circle at 50% 50%, #ffffff 10%, #b794f4 50%, #512da8 90%, #311b92 100%);
+    box-shadow: 0 0 20px 10px rgba(104, 58, 183, 0.5), 
+                inset 0 0 20px rgba(255, 255, 255, 0.5);
     position: relative;
-    animation: spin 10s infinite linear;
+    transform-style: preserve-3d;
+    animation: rotateSphere 10s infinite linear;
     margin-bottom: 30px;
 }
 
-@keyframes spin {
-    from {
-        transform: rotateY(0deg);
+@keyframes rotateSphere {
+    0% {
+        transform: rotate3d(1, 1, 0, 0deg);
     }
-    to {
-        transform: rotateY(360deg);
+    100% {
+        transform: rotate3d(1, 1, 0, 360deg);
     }
 }
 
