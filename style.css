@@ -204,6 +204,10 @@ h1 {
     }
 }
 
+.toggle-login {
+    display: none;
+}
+
 #login-button {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
@@ -215,6 +219,7 @@ h1 {
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
     text-decoration: none;
+    display: inline-block;
 }
 
 #login-button:hover {
@@ -222,18 +227,19 @@ h1 {
     color: #111;
 }
 
-.login-form {
+#toggle-login:checked + #login-button + #login-form,
+#toggle-login:checked ~ #login-form {
+    display: flex;
+    opacity: 1;
+}
+
+#login-form {
     display: none;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
     opacity: 0;
     transition: opacity 0.5s ease;
-}
-
-:target .login-form {
-    display: flex;
-    opacity: 1;
 }
 
 .login-form input {
