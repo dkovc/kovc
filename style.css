@@ -38,33 +38,72 @@ main {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #ccd6f6;
-    text-shadow: 0 0 5px rgba(204, 214, 246, 0.7);
+    text-shadow: 0 0 15px rgba(204, 214, 246, 0.8), 0 0 30px rgba(204, 214, 246, 0.5);
     margin-bottom: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .motto {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-style: italic;
     color: #ccd6f6;
-    text-shadow: 0 0 3px rgba(204, 214, 246, 0.5);
+    text-shadow: 0 0 10px rgba(204, 214, 246, 0.7);
     margin-bottom: 20px;
+    animation: fadeIn 3s ease-in-out;
 }
 
 .sphere {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: radial-gradient(circle at 50% 50%, #ccd6f6, #283d5b 70%, #0c1b29 90%);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 5px 15px rgba(255, 255, 255, 0.3);
     margin-bottom: 30px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
+    }
+    .motto {
+        font-size: 1.4rem;
+    }
+    .sphere {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
     }
     .motto {
         font-size: 1.2rem;
@@ -72,18 +111,5 @@ h1 {
     .sphere {
         width: 120px;
         height: 120px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-    .motto {
-        font-size: 1rem;
-    }
-    .sphere {
-        width: 100px;
-        height: 100px;
     }
 }
