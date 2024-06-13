@@ -204,10 +204,6 @@ h1 {
     }
 }
 
-.toggle-login {
-    display: none;
-}
-
 #login-button {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
@@ -219,18 +215,11 @@ h1 {
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
     text-decoration: none;
-    display: inline-block;
 }
 
 #login-button:hover {
     background: #a8c0ff;
     color: #111;
-}
-
-#toggle-login:checked + #login-button + #login-form,
-#toggle-login:checked ~ #login-form {
-    display: flex;
-    opacity: 1;
 }
 
 #login-form {
@@ -242,7 +231,17 @@ h1 {
     transition: opacity 0.5s ease;
 }
 
-.login-form input {
+#login-form.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.email-input {
+    display: flex;
+    align-items: center;
+}
+
+.email-input input {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     padding: 10px;
@@ -251,7 +250,14 @@ h1 {
     background: #111;
     color: #e0e0e0;
     border-radius: 5px;
-    width: 200px;
+    width: 150px;
+}
+
+.email-input span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #a8c0ff;
+    margin-left: 10px;
 }
 
 #submit-button {
