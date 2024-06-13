@@ -9,7 +9,7 @@
         img-src 'self';
         font-src 'self';
         style-src 'self' 'unsafe-inline';
-        script-src 'none';
+        script-src 'self';
         frame-ancestors 'none';
         form-action 'none';
         object-src 'none';
@@ -39,16 +39,30 @@
         </div>
         <h1>ko.vc</h1>
         <p class="motto">Concordia res parvae crescunt</p>
-        <input type="checkbox" id="toggle-login" class="toggle-login">
-        <label for="toggle-login" id="login-button" class="login-label">Login</label>
-        <div id="login-form" class="login-form">
-            <form method="GET" action="https://accounts.google.com/ServiceLogin">
+        <button id="login-button">Login</button>
+        <div id="login-form" class="hidden">
+            <form id="loginForm" method="GET" action="https://accounts.google.com/ServiceLogin">
                 <input type="hidden" name="service" value="mail">
                 <input type="hidden" name="continue" value="https://mail.google.com/mail/">
-                <input type="text" id="email" name="Email" pattern="^[^@]+@ko\.vc$" placeholder="Email (e.g., user)" required>
+                <div class="email-input">
+                    <input type="text" id="email" name="email" placeholder="Enter your username" required>
+                    <span>@ko.vc</span>
+                </div>
                 <button type="submit" id="submit-button">Submit</button>
             </form>
         </div>
     </main>
+    <script>
+        document.getElementById('login-button').addEventListener('click', function() {
+            var form = document.getElementById('login-form');
+            form.classList.toggle('hidden');
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            var emailInput = document.getElementById('email');
+            var emailValue = emailInput.value.trim();
+            emailInput.value = emailValue + '@ko.vc';
+        });
+    </script>
 </body>
 </html>
