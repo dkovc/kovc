@@ -57,20 +57,24 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), 
-                radial-gradient(circle at 40% 30%, #ffffff, #b794f4 50%, #512da8 75%, #311b92 100%);
-    box-shadow: 0 10px 30px rgba(104, 58, 183, 0.5), inset 0 10px 30px rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(183, 148, 244, 0.5);
-    animation: rotate 60s infinite linear;
+    background: radial-gradient(circle at 40% 40%, #ffffff 10%, #b794f4 40%, #512da8 75%, #311b92 100%);
+    box-shadow: 0 0 20px 10px rgba(104, 58, 183, 0.3), 
+                0 0 60px rgba(183, 148, 244, 0.7), 
+                inset 0 0 30px rgba(255, 255, 255, 0.5);
+    position: relative;
+    animation: roll 10s infinite linear;
     margin-bottom: 30px;
 }
 
-@keyframes rotate {
+@keyframes roll {
     0% {
-        transform: rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(20px) rotate(180deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translateX(0) rotate(360deg);
     }
 }
 
