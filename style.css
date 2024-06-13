@@ -62,19 +62,16 @@ h1 {
                 0 0 60px rgba(183, 148, 244, 0.7), 
                 inset 0 0 30px rgba(255, 255, 255, 0.5);
     position: relative;
-    animation: roll 10s infinite linear;
+    animation: spin 10s infinite linear;
     margin-bottom: 30px;
 }
 
-@keyframes roll {
-    0% {
-        transform: translateX(0) rotate(0deg);
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
     }
-    50% {
-        transform: translateX(20px) rotate(180deg);
-    }
-    100% {
-        transform: translateX(0) rotate(360deg);
+    to {
+        transform: rotateY(360deg);
     }
 }
 
