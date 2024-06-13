@@ -9,16 +9,16 @@
         img-src 'self';
         font-src 'self';
         style-src 'self' 'unsafe-inline';
-        script-src 'self';
+        script-src 'none';
         frame-ancestors 'none';
-        form-action 'self' https://accounts.google.com/ServiceLogin;
+        form-action 'none';
         object-src 'none';
     ">
     <meta name="referrer" content="no-referrer">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta name="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), fullscreen=(), payment=()">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), fullscreen=(), payment=()">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,7 +31,6 @@
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="preload" href="fonts/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <main>
@@ -40,18 +39,6 @@
         </div>
         <h1>ko.vc</h1>
         <p class="motto">Concordia res parvae crescunt</p>
-        <button id="login-button">Login</button>
-        <div id="login-form" class="hidden">
-            <form id="loginForm" method="GET" action="https://accounts.google.com/ServiceLogin">
-                <input type="hidden" name="service" value="mail">
-                <input type="hidden" name="continue" value="https://mail.google.com/mail/">
-                <div class="email-input">
-                    <input type="text" id="email" name="email" placeholder="Enter your username" required>
-                    <span>@ko.vc</span>
-                </div>
-                <button type="submit" id="submit-button">Submit</button>
-            </form>
-        </div>
     </main>
 </body>
 </html>
