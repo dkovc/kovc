@@ -57,8 +57,10 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: radial-gradient(circle at 40% 30%, #ffffff, #b794f4 30%, #512da8 60%, #311b92 90%);
-    box-shadow: 0 0 20px 10px rgba(183, 148, 244, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), 
+                radial-gradient(circle at 40% 30%, #ffffff, #b794f4 50%, #512da8 75%, #311b92 100%);
+    box-shadow: 0 10px 30px rgba(104, 58, 183, 0.5), inset 0 10px 30px rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(183, 148, 244, 0.5);
     animation: rotate 60s infinite linear;
     margin-bottom: 30px;
 }
