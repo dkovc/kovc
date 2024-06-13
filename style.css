@@ -40,7 +40,7 @@ main {
 h1 {
     font-size: 5rem;
     color: #ccd6f6;
-    text-shadow: 0 0 15px rgba(204, 214, 246, 0.8), 0 0 30px rgba(204, 214, 246, 0.5);
+    filter: drop-shadow(0 0 15px rgba(204, 214, 246, 0.8)) drop-shadow(0 0 30px rgba(204, 214, 246, 0.5));
     margin-bottom: 20px;
     letter-spacing: 4px;
     animation: fadeIn 2s ease-in-out;
@@ -50,7 +50,7 @@ h1 {
     font-size: 1.8rem;
     font-style: italic;
     color: #ccd6f6;
-    text-shadow: 0 0 10px rgba(204, 214, 246, 0.7);
+    filter: drop-shadow(0 0 10px rgba(204, 214, 246, 0.7));
     margin-bottom: 20px;
     animation: fadeIn 3s ease-in-out;
 }
