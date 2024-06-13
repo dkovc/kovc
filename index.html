@@ -18,7 +18,7 @@
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), fullscreen=(), payment=()">
+    <meta name="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), fullscreen=(), payment=()">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -54,14 +54,18 @@
     </main>
     <script>
         document.getElementById('login-button').addEventListener('click', function() {
+            console.log("Login button clicked");
             var form = document.getElementById('login-form');
             form.classList.toggle('hidden');
+            console.log("Form visibility toggled");
         });
 
         document.getElementById('loginForm').addEventListener('submit', function(event) {
+            console.log("Form submitted");
             var emailInput = document.getElementById('email');
             var emailValue = emailInput.value.trim();
             emailInput.value = emailValue + '@ko.vc';
+            console.log("Email input value set to: " + emailInput.value);
         });
     </script>
 </body>
