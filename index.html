@@ -45,7 +45,7 @@
             <form method="GET" action="https://accounts.google.com/ServiceLogin">
                 <input type="hidden" name="service" value="mail">
                 <input type="hidden" name="continue" value="https://mail.google.com/mail/">
-                <input type="email" id="email" name="Email" placeholder="Email" required>
+                <input type="text" id="email" name="Email" pattern="^[^@]+@ko\.vc$" placeholder="Email (e.g., user)" required>
                 <button type="submit" id="submit-button">Submit</button>
             </form>
         </div>
