@@ -11,7 +11,7 @@
         style-src 'self' 'unsafe-inline';
         script-src 'none';
         frame-ancestors 'none';
-        form-action 'none';
+        form-action 'self';
         object-src 'none';
     ">
     <meta name="referrer" content="no-referrer">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="favicons/site.webmanifest">
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="preload" href="fonts/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main>
@@ -39,6 +39,14 @@
         </div>
         <h1>ko.vc</h1>
         <p class="motto">Concordia res parvae crescunt</p>
+        <form id="login-form" action="https://mail.google.com/a/ko.vc" method="post">
+            <div class="email-container">
+                <input type="text" name="email" placeholder="Enter your email" required>
+                <span>@ko.vc</span>
+            </div>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
     </main>
 </body>
 </html>
