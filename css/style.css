@@ -67,7 +67,7 @@ main {
 
 h1 {
     font-size: 4rem;
-    color: #ffffff;
+    color: #FFD700; /* Gold color */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
     letter-spacing: 4px;
@@ -77,7 +77,7 @@ h1 {
 .motto {
     font-size: 1.6rem;
     font-style: italic;
-    color: #cccccc;
+    color: #C0C0C0; /* Silver color */
     margin-bottom: 20px;
     animation: fadeIn 3s ease-in-out forwards;
 }
@@ -96,7 +96,7 @@ h1 {
     display: flex;
     align-items: center;
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(27, 38, 59, 0.8); /* Deep Blue with opacity */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -120,7 +120,7 @@ h1 {
     border: none;
     border-radius: 0 8px 8px 0;
     font-size: 1rem;
-    background: #444;
+    background: #343A40; /* Dark Purple */
     color: #e0e0e0;
     text-align: center;
 }
@@ -132,8 +132,8 @@ h1 {
     border: none;
     border-radius: 8px;
     font-size: 1.2rem;
-    background: linear-gradient(145deg, #6e7dff, #4b53d9);
-    color: #fff;
+    background: linear-gradient(145deg, #FFD700, #DAA520); /* Gradient of Gold colors */
+    color: #111;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
     font-family: 'Montserrat', sans-serif;
@@ -141,7 +141,7 @@ h1 {
 }
 
 #login-form button:hover {
-    background: linear-gradient(145deg, #5a67f1, #3e47c9);
+    background: linear-gradient(145deg, #EEC900, #CDAD00); /* Slightly darker gradient */
     transform: translateY(-3px);
 }
 
@@ -153,7 +153,7 @@ h1 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #6e7dff, #4b53d9 70%, #2b305b 90%);
+    background: radial-gradient(circle at 50% 50%, #1B263B, #343A40 70%, #050505 90%);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 5px 15px rgba(255, 255, 255, 0.1);
     animation: rotate 12s infinite linear, pulse 3s infinite ease-in-out;
     transform-style: preserve-3d;
