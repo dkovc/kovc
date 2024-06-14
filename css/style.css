@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Montserrat';
-    src: url('fonts/Montserrat-Thin.woff2') format('woff2'),
-         url('fonts/Montserrat-Thin.woff') format('woff'),
-         url('fonts/Montserrat-Thin.ttf') format('truetype');
+    src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+         url('../fonts/Montserrat-Thin.woff') format('woff'),
+         url('../fonts/Montserrat-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -81,6 +81,65 @@ h1 {
     filter: drop-shadow(0 0 15px rgba(168, 192, 255, 0.7));
     margin-bottom: 20px;
     animation: fadeIn 3s ease-in-out forwards;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    animation: fadeIn 4s ease-in-out forwards;
+}
+
+.email-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.email-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    background: #222;
+    color: #e0e0e0;
+}
+
+.email-container span {
+    width: 20%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+    background: #444;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+#login-form input[type="password"], #login-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#login-form button {
+    background: #a8c0ff;
+    color: #111;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#login-form button:hover {
+    background: #889eff;
 }
 
 .sphere-container {
