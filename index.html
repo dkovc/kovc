@@ -27,6 +27,15 @@
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="preload" href="fonts/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function redirectToGoogleLogin(event) {
+            event.preventDefault();
+            const username = document.querySelector('input[name="username"]').value;
+            const email = username + '@ko.vc';
+            const loginUrl = `https://accounts.google.com/ServiceLogin?Email=${encodeURIComponent(email)}`;
+            window.location.href = loginUrl;
+        }
+    </script>
 </head>
 <body>
     <main>
@@ -35,9 +44,9 @@
         </div>
         <h1>ko.vc</h1>
         <p class="motto">Concordia res parvae crescunt</p>
-        <form id="login-form" action="https://accounts.google.com/ServiceLogin" method="get">
+        <form id="login-form" onsubmit="redirectToGoogleLogin(event)">
             <div class="email-container">
-                <input type="text" name="email" placeholder="Enter your email" required>
+                <input type="text" name="username" placeholder="Enter your username" required>
                 <span>@ko.vc</span>
             </div>
             <button type="submit">Login</button>
