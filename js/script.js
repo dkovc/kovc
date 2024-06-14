@@ -6,6 +6,6 @@ function redirectToGoogleLogin(event) {
     event.preventDefault();
     const username = document.querySelector('input[name="username"]').value;
     const email = username + '@ko.vc';
-    const loginUrl = `https://accounts.google.com/ServiceLogin?service=mail&Email=${encodeURIComponent(email)}&continue=https://mail.google.com/a/ko.vc`;
+    const loginUrl = `https://accounts.google.com/signin/v2/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=ServiceLogin&Email=${encodeURIComponent(email)}`;
     window.location.href = loginUrl;
 }
