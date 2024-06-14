@@ -108,6 +108,7 @@ h1 {
     font-size: 1rem;
     background: #222;
     color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .email-container span {
@@ -133,6 +134,7 @@ h1 {
     color: #111;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #login-form button:hover {
