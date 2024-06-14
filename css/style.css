@@ -16,7 +16,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at 50% 50%, #000, #0a0a0a 50%, #111 100%);
+    background: radial-gradient(circle at 50% 50%, #1a1a1a, #111 50%, #000 100%);
     font-family: 'Montserrat', sans-serif;
     color: #e0e0e0;
     text-align: center;
@@ -122,16 +122,13 @@ h1 {
     text-align: center;
 }
 
-#login-form input[type="password"], #login-form button {
+#login-form button {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
-}
-
-#login-form button {
     background: #a8c0ff;
     color: #111;
     cursor: pointer;
