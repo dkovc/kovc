@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('login-form').addEventListener('submit', redirectToGoogleLogin);
+});
+
 function redirectToGoogleLogin(event) {
     event.preventDefault();
     const username = document.querySelector('input[name="username"]').value;
