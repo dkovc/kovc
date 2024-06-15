@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
-         url('../fonts/Montserrat-Thin.woff') format('woff'),
-         url('../fonts/Montserrat-Thin.ttf') format('truetype');
+    url('../fonts/Montserrat-Thin.woff') format('woff'),
+    url('../fonts/Montserrat-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
