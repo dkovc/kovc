@@ -30,15 +30,7 @@ html, body {
     background-size: cover;
     background-position: center;
     animation: backgroundShift 10s infinite alternate ease-in-out;
-}
-
-@keyframes backgroundShift {
-    0% {
-        background-position: 50% 50%;
-    }
-    100% {
-        background-position: 55% 55%;
-    }
+    box-sizing: border-box; /* Add this line */
 }
 
 main {
@@ -50,36 +42,7 @@ main {
     padding: 20px;
     transition: opacity 0.5s ease-in-out;
     animation: mainFadeIn 3s ease-in-out;
-}
-
-@keyframes mainFadeIn {
-    0% {
-        opacity: 0;
-        color: #e0e0e0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        color: #e0e0e0;
-        transform: scale(1);
-    }
-}
-
-h1 {
-    font-size: 4rem;
-    color: #ffffff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
-    letter-spacing: 4px;
-    animation: fadeIn 2s ease-in-out forwards;
-}
-
-.motto {
-    font-size: 1.6rem;
-    font-style: italic;
-    color: #cccccc;
-    margin-bottom: 20px;
-    animation: fadeIn 3s ease-in-out forwards;
+    box-sizing: border-box; /* Add this line */
 }
 
 #login-form {
@@ -90,6 +53,7 @@ h1 {
     max-width: 400px;
     margin-top: 20px;
     animation: fadeIn 4s ease-in-out forwards;
+    box-sizing: border-box; /* Add this line */
 }
 
 .email-container {
@@ -99,6 +63,7 @@ h1 {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Add this line */
 }
 
 .email-container input {
@@ -111,6 +76,7 @@ h1 {
     background: transparent;
     color: #e0e0e0;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box; /* Add this line */
 }
 
 .email-container span {
@@ -123,6 +89,7 @@ h1 {
     background: #444;
     color: #e0e0e0;
     text-align: center;
+    box-sizing: border-box; /* Add this line */
 }
 
 #login-form button {
@@ -138,6 +105,7 @@ h1 {
     transition: background 0.3s ease, transform 0.3s ease;
     font-family: 'Montserrat', sans-serif;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Add this line */
 }
 
 #login-form button:hover {
@@ -227,6 +195,7 @@ h1 {
     }
 }
 
+/* Responsive Design */
 @media (max-width: 1024px) {
     h1 {
         font-size: 3.5rem;
@@ -237,6 +206,9 @@ h1 {
     .sphere {
         width: 180px;
         height: 180px;
+    }
+    #login-form {
+        padding: 0 10px; /* Ensure padding on smaller screens */
     }
 }
 
@@ -251,6 +223,9 @@ h1 {
         width: 150px;
         height: 150px;
     }
+    #login-form {
+        padding: 0 10px; /* Ensure padding on smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
@@ -263,5 +238,23 @@ h1 {
     .sphere {
         width: 120px;
         height: 120px;
+    }
+    #login-form {
+        padding: 0 10px; /* Ensure padding on smaller screens */
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    main {
+        padding: 20px 5%;
+    }
+    #login-form {
+        width: 90%;
+    }
+    .email-container input {
+        width: 70%;
+    }
+    .email-container span {
+        width: 30%;
     }
 }
