@@ -25,17 +25,14 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    animation: backgroundShift 10s infinite alternate ease-in-out;
     box-sizing: border-box;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -50,11 +47,12 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     padding: 20px;
     transition: opacity 0.5s ease-in-out;
     animation: mainFadeIn 3s ease-in-out;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 h1 {
@@ -306,9 +304,9 @@ h1 {
 
 @media (max-width: 1024px) and (orientation: landscape) {
     html, body {
-        overflow: auto;
-        min-height: 100%;
-        background: radial-gradient(circle at 50% 50%, #0d0d0d, #0a0a0a 50%, #050505 100%);
+        overflow-x: hidden;
+        overflow-y: auto;
+        min-height: 100vh;
     }
     main {
         padding: 20px 5%;
