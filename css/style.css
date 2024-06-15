@@ -369,26 +369,32 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 0;
   }
   main {
+    width: 100vw;
     padding: 20px 5%;
     min-height: 100vh;
     justify-content: center;
   }
   #login-form {
-    width: 90%;
+    width: 100%;
   }
 }
 
 @supports (-webkit-touch-callout: none) {
   html {
     height: -webkit-fill-available;
+    width: -webkit-fill-available;
   }
   body {
     height: 100vh;
     height: -webkit-fill-available;
+    width: 100vw;
+    width: -webkit-fill-available;
   }
   main {
     height: 100vh;
     height: -webkit-fill-available;
+    width: 100vw;
+    width: -webkit-fill-available;
   }
   .sphere {
     animation: rotate 12s infinite linear, pulse 3s infinite ease-in-out;
