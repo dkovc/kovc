@@ -65,7 +65,7 @@ body::before {
   bottom: 0;
   background: radial-gradient(circle at 50% 50%, var(--primary-bg-color), var(--secondary-bg-color) 50%, var(--tertiary-bg-color) 100%);
   z-index: -1;
-  filter: blur(30px);
+  filter: blur(20px);
 }
 
 main {
@@ -76,25 +76,29 @@ main {
   width: 90%;
   max-width: 1200px;
   min-height: 100vh;
-  padding: 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--highlight-color);
   text-shadow: var(--text-shadow);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   letter-spacing: 2px;
-  animation: fadeInDown 1s ease-out;
+  animation: fadeInSlideDown 1s ease-out;
 }
 
 .motto {
   font-size: 1.5rem;
   font-style: italic;
   color: var(--secondary-color);
-  margin-bottom: 20px;
-  animation: fadeInUp 1s ease-out;
+  margin-bottom: 30px;
+  animation: fadeInSlideUp 1s ease-out;
 }
 
 #login-form {
@@ -112,11 +116,12 @@ h1 {
   display: flex;
   align-items: center;
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   box-sizing: border-box;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .email-container input,
@@ -167,20 +172,20 @@ h1 {
 
 .sphere-container {
   perspective: 1000px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .sphere {
-  width: 20vw;
-  height: 20vw;
-  max-width: 200px;
-  max-height: 200px;
-  min-width: 120px;
-  min-height: 120px;
+  width: 25vw;
+  height: 25vw;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 150px;
+  min-height: 150px;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, var(--sphere-gradient-start), var(--sphere-gradient-mid) 70%, var(--sphere-gradient-end) 90%);
   box-shadow: var(--sphere-shadow), var(--sphere-inset-shadow);
-  animation: rotate 12s infinite linear, pulse 3s infinite ease-in-out;
+  animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
   transform-style: preserve-3d;
   position: relative;
 }
@@ -192,7 +197,7 @@ h1 {
   width: 100%;
   height: 100%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-  animation: shine 6s infinite alternate ease-in-out;
+  animation: shine 8s infinite alternate ease-in-out;
 }
 
 .sphere::before {
@@ -204,7 +209,7 @@ h1 {
 .sphere::after {
   top: 0;
   left: 0;
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 
 @keyframes shine {
@@ -239,10 +244,10 @@ h1 {
   }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInSlideDown {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
@@ -250,10 +255,10 @@ h1 {
   }
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInSlideUp {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
@@ -281,10 +286,17 @@ input[type="search"] {
   box-sizing: border-box;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 input[type="search"]::placeholder {
   color: var(--input-placeholder-color);
+}
+
+input[type="search"]:focus {
+  border-color: var(--button-bg-start);
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -294,24 +306,43 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
   h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
   .motto {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
   .sphere {
-    width: 22vw;
-    height: 22vw;
-    max-width: 180px;
-    max-height: 180px;
+    width: 20vw;
+    height: 20vw;
+    max-width: 250px;
+    max-height: 250px;
   }
 }
 
 @media (max-width: 1024px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+  }
+  .motto {
+    font-size: 1.5rem;
+  }
+  .sphere {
+    width: 22vw;
+    height: 22vw;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  #login-form {
+    width: 60%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
   .motto {
     font-size: 1.2rem;
@@ -323,14 +354,13 @@ input[type="search"]::-webkit-search-results-decoration {
     max-height: 160px;
   }
   #login-form {
-    width: 60%;
-    padding: 0 10px;
+    width: 80%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .motto {
     font-size: 1rem;
@@ -338,24 +368,6 @@ input[type="search"]::-webkit-search-results-decoration {
   .sphere {
     width: 18vw;
     height: 18vw;
-    max-width: 140px;
-    max-height: 140px;
-  }
-  #login-form {
-    width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.4rem;
-  }
-  .motto {
-    font-size: 0.9rem;
-  }
-  .sphere {
-    width: 15vw;
-    height: 15vw;
     max-width: 130px;
     max-height: 130px;
   }
@@ -401,8 +413,8 @@ input[type="search"]::-webkit-search-results-decoration {
     width: -webkit-fill-available;
   }
   .sphere {
-    animation: rotate 12s infinite linear, pulse 3s infinite ease-in-out;
-    -webkit-animation: rotate 12s infinite linear, pulse 3s infinite ease-in-out;
+    animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
+    -webkit-animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
   }
   #login-form button {
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
