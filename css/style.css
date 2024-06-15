@@ -26,8 +26,7 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 body::before {
@@ -47,12 +46,11 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     padding: 20px;
     transition: opacity 0.5s ease-in-out;
     animation: mainFadeIn 3s ease-in-out;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 h1 {
@@ -329,13 +327,11 @@ input[type="search"]::placeholder {
 
 @media (max-width: 1024px) and (orientation: landscape) {
     html, body {
-        overflow-x: hidden;
-        overflow-y: auto;
-        min-height: 100vh;
+        overflow: hidden;
     }
     main {
         padding: 20px 5%;
-        height: auto;
+        height: 100vh;
         justify-content: center;
     }
     #login-form {
