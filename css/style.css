@@ -320,11 +320,13 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (device-width: 430px) and (device-height: 932px) and (orientation: landscape) {
     html, body {
         overflow: hidden;
         height: 100vh;
         width: 100vw;
+        margin: 0;
+        padding: 0;
     }
     main {
         padding: 20px 5%;
