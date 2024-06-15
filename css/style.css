@@ -81,7 +81,7 @@ main {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: var(--highlight-color);
   text-shadow: var(--text-shadow);
   margin-bottom: 20px;
@@ -90,7 +90,7 @@ h1 {
 }
 
 .motto {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-style: italic;
   color: var(--secondary-color);
   margin-bottom: 20px;
@@ -101,9 +101,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 350px;
-  margin-top: 20px;
+  width: 50%;
+  max-width: 400px;
+  margin-top: 40px;
   box-sizing: border-box;
   animation: fadeIn 1.5s ease-out;
 }
@@ -171,8 +171,8 @@ h1 {
 }
 
 .sphere {
-  width: 25vw;
-  height: 25vw;
+  width: 20vw;
+  height: 20vw;
   max-width: 200px;
   max-height: 200px;
   min-width: 120px;
@@ -296,10 +296,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media (max-width: 1440px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .motto {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .sphere {
     width: 22vw;
@@ -311,10 +311,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media (max-width: 1024px) {
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .motto {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .sphere {
     width: 20vw;
@@ -323,16 +323,17 @@ input[type="search"]::-webkit-search-results-decoration {
     max-height: 160px;
   }
   #login-form {
+    width: 60%;
     padding: 0 10px;
   }
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .motto {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .sphere {
     width: 18vw;
@@ -340,11 +341,14 @@ input[type="search"]::-webkit-search-results-decoration {
     max-width: 140px;
     max-height: 140px;
   }
+  #login-form {
+    width: 80%;
+  }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .motto {
     font-size: 0.9rem;
