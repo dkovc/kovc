@@ -29,6 +29,7 @@
     --sphere-gradient-start: #6e7dff;
     --sphere-gradient-mid: #4b53d9;
     --sphere-gradient-end: #2b305b;
+    --font-size-base: 16px;
 }
 
 html, body {
@@ -50,6 +51,7 @@ html, body {
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
+    font-size: var(--font-size-base);
 }
 
 body::before {
