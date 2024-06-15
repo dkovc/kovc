@@ -9,26 +9,26 @@
 }
 
 :root {
-  --primary-bg-color: #0d0d0d;
-  --secondary-bg-color: #1a1a1a;
-  --tertiary-bg-color: #333333;
+  --primary-bg-color: #0a0a0a;
+  --secondary-bg-color: #0f0f0f;
+  --tertiary-bg-color: #1a1a1a;
   --primary-color: #e0e0e0;
-  --secondary-color: #cccccc;
+  --secondary-color: #b3b3b3;
   --highlight-color: #ffffff;
-  --button-bg-start: #6e7dff;
-  --button-bg-end: #4b53d9;
-  --button-hover-bg-start: #5a67f1;
-  --button-hover-bg-end: #3e47c9;
+  --button-bg-start: #4444ff;
+  --button-bg-end: #2222cc;
+  --button-hover-bg-start: #6666ff;
+  --button-hover-bg-end: #3333cc;
   --input-bg-color: rgba(255, 255, 255, 0.1);
-  --input-border-color: #444;
-  --input-placeholder-color: #bbbbbb;
-  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  --sphere-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  --sphere-inset-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.1);
-  --sphere-gradient-start: #6e7dff;
-  --sphere-gradient-mid: #4b53d9;
-  --sphere-gradient-end: #2b305b;
+  --input-border-color: #555;
+  --input-placeholder-color: #888;
+  --text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --sphere-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  --sphere-inset-shadow: inset 0 10px 20px rgba(255, 255, 255, 0.1);
+  --sphere-gradient-start: #2222cc;
+  --sphere-gradient-mid: #4444ff;
+  --sphere-gradient-end: #1a1a5b;
   --font-size-base: 16px;
   --accent-color: #FF5733;
   --neon-green: #39ff14;
@@ -56,6 +56,18 @@ html, body {
   overflow: auto;
   font-size: var(--font-size-base);
   transition: background 0.5s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-bg-color) 0%, var(--secondary-bg-color) 50%, var(--tertiary-bg-color) 100%);
+  z-index: -1;
+  filter: blur(30px);
 }
 
 main {
@@ -113,7 +125,7 @@ h1 {
   box-sizing: border-box;
   overflow: hidden;
   margin-bottom: 20px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .email-container input,
