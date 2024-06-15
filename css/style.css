@@ -10,8 +10,8 @@
 
 :root {
   --primary-bg-color: #0d0d0d;
-  --secondary-bg-color: #0a0a0a;
-  --tertiary-bg-color: #050505;
+  --secondary-bg-color: #1a1a1a;
+  --tertiary-bg-color: #333333;
   --primary-color: #e0e0e0;
   --secondary-color: #cccccc;
   --highlight-color: #ffffff;
@@ -41,7 +41,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 50% 50%, var(--primary-bg-color), var(--secondary-bg-color) 50%, var(--tertiary-bg-color) 100%);
+  background: linear-gradient(135deg, var(--primary-bg-color), var(--secondary-bg-color), var(--tertiary-bg-color));
   font-family: 'Montserrat', sans-serif;
   color: var(--primary-color);
   text-align: center;
@@ -56,18 +56,6 @@ html, body {
   transition: background 0.5s ease;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 50%, var(--primary-bg-color), var(--secondary-bg-color) 50%, var(--tertiary-bg-color) 100%);
-  z-index: -1;
-  filter: blur(20px);
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -78,10 +66,6 @@ main {
   min-height: 100vh;
   padding: 40px 20px;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  box-shadow: var(--box-shadow);
-  backdrop-filter: blur(10px);
 }
 
 h1 {
