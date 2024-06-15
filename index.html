@@ -26,21 +26,20 @@
     <link rel="manifest" href="favicons/site.webmanifest">
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="preload" href="fonts/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style-upgrade.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="overlay"></div>
     <main>
-        <div class="logo-container">
-            <img src="images/logo.png" alt="Nexus Logo" class="logo">
+        <div class="sphere-container">
+            <div class="sphere"></div>
         </div>
         <h1>ko.vc</h1>
-        <p class="motto">Concordia res parvae crescunt </p>
+        <p class="motto">Concordia res parvae crescunt</p>
         <form id="login-form">
-            <div class="input-group">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
+            <div class="email-container">
+                <input type="text" name="username" placeholder="Enter your username" required>
+                <span>@ko.vc</span>
             </div>
             <button type="submit">Login</button>
         </form>
