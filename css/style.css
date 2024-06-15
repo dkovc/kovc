@@ -33,12 +33,24 @@ html, body {
     box-sizing: border-box;
 }
 
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, #0d0d0d, #0a0a0a 50%, #050505 100%);
+    z-index: -1;
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
     padding: 20px;
     transition: opacity 0.5s ease-in-out;
     animation: mainFadeIn 3s ease-in-out;
@@ -195,7 +207,6 @@ main {
     }
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     h1 {
         font-size: 3.5rem;
@@ -246,11 +257,13 @@ main {
 
 @media (max-width: 1024px) and (orientation: landscape) {
     html, body {
-        overflow: auto;
+        overflow: hidden;
     }
     main {
         padding: 20px 5%;
         overflow: hidden;
+        height: 100%;
+        justify-content: center;
     }
     #login-form {
         width: 90%;
