@@ -195,6 +195,7 @@ main {
     }
 }
 
+/* Responsive Design */
 @media (max-width: 1024px) {
     h1 {
         font-size: 3.5rem;
@@ -244,8 +245,12 @@ main {
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
+    html, body {
+        overflow: auto;
+    }
     main {
         padding: 20px 5%;
+        overflow: hidden;
     }
     #login-form {
         width: 90%;
