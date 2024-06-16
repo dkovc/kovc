@@ -126,7 +126,7 @@ h1 {
   box-sizing: border-box;
 }
 
-.email-container input {
+email-container input {
   width: 70%;
   margin: 0;
   border: none;
