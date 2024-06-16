@@ -182,7 +182,7 @@ h1 {
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, var(--sphere-gradient-start), var(--sphere-gradient-mid) 70%, var(--sphere-gradient-end) 90%);
   box-shadow: var(--sphere-shadow), var(--sphere-inset-shadow);
-  animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
+  animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out, colorChange 20s infinite ease-in-out;
   transform-style: preserve-3d;
   position: relative;
 }
@@ -269,6 +269,15 @@ h1 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    background: radial-gradient(circle at 50% 50%, #2222cc, #4444ff 70%, #1a1a5b 90%);
+  }
+  50% {
+    background: radial-gradient(circle at 50% 50%, #2222aa, #4444dd 70%, #1a1a4b 90%);
   }
 }
 
@@ -410,8 +419,8 @@ input[type="search"]::-webkit-search-results-decoration {
     width: -webkit-fill-available;
   }
   .sphere {
-    animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
-    -webkit-animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
+    animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out, colorChange 20s infinite ease-in-out;
+    -webkit-animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out, colorChange 20s infinite ease-in-out;
   }
   #login-form button {
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
