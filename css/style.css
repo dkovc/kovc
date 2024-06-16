@@ -177,7 +177,7 @@ h1 {
   min-width: 150px;
   min-height: 150px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, var(--sphere-gradient-start), var(--sphere-gradient-mid) 70%, var(--sphere-gradient-end) 100%);
+  background: radial-gradient(circle at 50% 50%, var(--button-bg-start), var(--button-bg-end) 70%);
   box-shadow: var(--sphere-shadow), var(--sphere-inset-shadow);
   animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out, colorChange 60s infinite linear;
   transform-style: preserve-3d;
@@ -271,19 +271,10 @@ h1 {
 
 @keyframes colorChange {
   0%, 100% {
-    background: radial-gradient(circle at 50% 50%, #2222cc, #4444ff 70%, #1a1a5b 100%);
+    background: radial-gradient(circle at 50% 50%, #4444ff, #2222cc 70%);
   }
-  20% {
-    background: radial-gradient(circle at 50% 50%, #2244cc, #4466ff 70%, #1a2a5b 100%);
-  }
-  40% {
-    background: radial-gradient(circle at 50% 50%, #2266cc, #4488ff 70%, #1a3a5b 100%);
-  }
-  60% {
-    background: radial-gradient(circle at 50% 50%, #2288cc, #44aaff 70%, #1a4a5b 100%);
-  }
-  80% {
-    background: radial-gradient(circle at 50% 50%, #22aacc, #44ccff 70%, #1a5a5b 100%);
+  50% {
+    background: radial-gradient(circle at 50% 50%, #6666ff, #3333cc 70%);
   }
 }
 
