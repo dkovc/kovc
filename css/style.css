@@ -126,7 +126,7 @@ h1 {
   box-sizing: border-box;
 }
 
-.email-container input {
+email-container input {
   width: 70%;
   margin: 0;
   border: none;
@@ -179,7 +179,7 @@ h1 {
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, var(--button-bg-start), var(--button-bg-end) 70%);
   box-shadow: var(--sphere-shadow), var(--sphere-inset-shadow);
-  animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out, colorChange 60s infinite linear;
+  animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
   transform-style: preserve-3d;
   position: relative;
 }
@@ -266,15 +266,6 @@ h1 {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes colorChange {
-  0%, 100% {
-    background: radial-gradient(circle at 50% 50%, #4444ff, #2222cc 70%);
-  }
-  50% {
-    background: radial-gradient(circle at 50% 50%, #6666ff, #3333cc 70%);
   }
 }
 
@@ -416,8 +407,8 @@ input[type="search"]::-webkit-search-results-decoration {
     width: -webkit-fill-available;
   }
   .sphere {
-    animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out, colorChange 60s infinite linear;
-    -webkit-animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out, colorChange 60s infinite linear;
+    animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
+    -webkit-animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
   }
   #login-form button {
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
