@@ -10,17 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
         sphere.style.background = 'radial-gradient(circle at 50% 50%, var(--button-bg-start), var(--button-bg-end) 70%)';
     });
 
-    document.getElementById('login-form').addEventListener('submit', handleFormSubmit);
+    document.getElementById('login-form').addEventListener('submit', redirectToGoogleLogin);
 });
 
-function handleFormSubmit(event) {
+function redirectToGoogleLogin(event) {
     event.preventDefault();
     const username = document.querySelector('input[name="username"]').value;
-    const email = `${username}@ko.vc`;
-    redirectToGoogleLogin(email);
-}
-
-function redirectToGoogleLogin(email) {
+    const email = username + '@ko.vc';
     const loginUrl = `https://accounts.google.com/AccountChooser?Email=${encodeURIComponent(email)}&continue=https://mail.google.com/a/ko.vc`;
     window.location.href = loginUrl;
 }
