@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        img-src 'self';
-        font-src 'self';
-        style-src 'self' 'unsafe-inline';
-        script-src 'self';
+        img-src 'self' data:;
+        font-src 'self' https://fonts.googleapis.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        script-src 'self' 'sha256-Ts5uVXxrfXh9mVgfNOJ0M3GGy8uS2BGyA5YFpaD0U5Q=';
         form-action 'self' https://accounts.google.com;
         object-src 'none';
         frame-ancestors 'none';
@@ -22,6 +22,10 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <title>Nexus</title>
     <link rel="icon" href="favicons/favicon.ico" type="image/x-icon" crossorigin="use-credentials">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -31,8 +35,7 @@
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="preload" href="fonts/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <meta name="csrf-token" content="RANDOM_CSRF_TOKEN_HERE">
+    <script src="js/script.js" defer integrity="sha384-Ts5uVXxrfXh9mVgfNOJ0M3GGy8uS2BGyA5YFpaD0U5Q=" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
@@ -41,7 +44,7 @@
         </div>
         <h1>ko.vc</h1>
         <p class="motto">Concordia res parvae crescunt</p>
-        <form id="login-form" method="POST" action="/login">
+        <form id="login-form" method="POST" action="/login" enctype="application/x-www-form-urlencoded">
             <div class="email-container">
                 <input type="text" name="username" placeholder="Enter your username" required>
                 <span>@ko.vc</span>
