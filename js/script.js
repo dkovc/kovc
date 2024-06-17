@@ -16,16 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleFormSubmit(event) {
     event.preventDefault();
     const username = document.querySelector('input[name="username"]').value;
-    const email = username + '@ko.vc';
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-    
-    const form = event.target;
-    const hiddenInput = document.createElement('input');
-    hiddenInput.type = 'hidden';
-    hiddenInput.name = '_csrf';
-    hiddenInput.value = csrfToken;
-    form.appendChild(hiddenInput);
-
+    const email = `${username}@ko.vc`;
     redirectToGoogleLogin(email);
 }
 
