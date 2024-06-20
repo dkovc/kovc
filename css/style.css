@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+       url('../fonts/Montserrat-Thin.woff') format('woff'),
+       url('../fonts/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
+  --primary-bg-color: #0a0a0a;
+  --secondary-bg-color: #0f0f0f;
+  --tertiary-bg-color: #1a1a1a;
   --primary-color: #e0e0e0;
   --secondary-color: #b3b3b3;
   --highlight-color: #ffffff;
-  --accent-color: #FF5733;
-  --bg-color-light: #f0f0f0;
-  --bg-color-dark: #0a0a0a;
-  --primary-bg-color: var(--bg-color-dark);
-  --secondary-bg-color: #0f0f0f;
-  --tertiary-bg-color: #1a1a1a;
   --button-bg-start: #4444ff;
   --button-bg-end: #2222cc;
   --button-hover-bg-start: #6666ff;
@@ -22,15 +27,7 @@
   --sphere-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
   --sphere-inset-shadow: inset 0 10px 20px rgba(255, 255, 255, 0.1);
   --font-size-base: 16px;
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-}
-
-html[data-theme='light'] {
-  --primary-bg-color: var(--bg-color-light);
-  --primary-color: #333;
-  --text-shadow: 0 2px 8px rgba(255, 255, 255, 0.7);
+  --accent-color: #FF5733;
 }
 
 html, body {
@@ -53,7 +50,7 @@ html, body {
   box-sizing: border-box;
   overflow: auto;
   font-size: var(--font-size-base);
-  transition: background 0.5s ease, color 0.5s ease;
+  transition: background 0.5s ease;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -70,21 +67,15 @@ body::before {
 }
 
 main {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 90%;
   max-width: 1200px;
   min-height: 100vh;
   padding: 40px 20px;
   box-sizing: border-box;
-  backdrop-filter: blur(10px);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  box-shadow: var(--glass-shadow);
-  transition: background 0.5s ease, border-color 0.5s ease;
 }
 
 h1 {
@@ -270,7 +261,7 @@ h1 {
 }
 
 @keyframes fadeIn {
-   0% {
+  0% {
     opacity: 0;
   }
   100% {
