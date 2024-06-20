@@ -28,6 +28,9 @@
   --sphere-inset-shadow: inset 0 10px 20px rgba(255, 255, 255, 0.1);
   --font-size-base: 16px;
   --accent-color: #FF5733;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
 html, body {
@@ -76,6 +79,11 @@ main {
   min-height: 100vh;
   padding: 40px 20px;
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
 }
 
 h1 {
