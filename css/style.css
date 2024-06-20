@@ -28,6 +28,8 @@
   --sphere-inset-shadow: inset 0 10px 20px rgba(255, 255, 255, 0.1);
   --font-size-base: 16px;
   --accent-color: #FF5733;
+  --sphere-glow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
+  --animation-duration: 10s;
 }
 
 html, body {
@@ -178,10 +180,11 @@ h1 {
   min-height: 150px;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, var(--button-bg-start), var(--button-bg-end) 70%);
-  box-shadow: var(--sphere-shadow), var(--sphere-inset-shadow);
-  animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
+  box-shadow: var(--sphere-shadow), var(--sphere-inset-shadow), var(--sphere-glow);
+  animation: rotate var(--animation-duration) infinite linear, pulse 4s infinite ease-in-out;
   transform-style: preserve-3d;
   position: relative;
+  overflow: hidden;
 }
 
 .sphere::before, .sphere::after {
@@ -407,8 +410,8 @@ input[type="search"]::-webkit-search-results-decoration {
     width: -webkit-fill-available;
   }
   .sphere {
-    animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
-    -webkit-animation: rotate 10s infinite linear, pulse 4s infinite ease-in-out;
+    animation: rotate var(--animation-duration) infinite linear, pulse 4s infinite ease-in-out;
+    -webkit-animation: rotate var(--animation-duration) infinite linear, pulse 4s infinite ease-in-out;
   }
   #login-form button {
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
